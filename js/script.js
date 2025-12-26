@@ -17,25 +17,62 @@ const root = getRootPath();
 // --- DATA DEFINITIONS ---
 
 const experienceData = [
-    { title: "Bachelor of Engineering", subtitle: "Lassonde School of Engineering - York University", date: "2025 - Present | Expected 2029", description: "Computer Engineering Student. Awarded York International Scholarship of Distinction.", details: ["ISAYU Event Coordinator (Sep 2025 - Present)", "Note Share & Class Rep @ MATH 1013 (Sep 2025 - Present)"], bg: "bg-indigo-50 dark:bg-indigo-500/10", color: "text-indigo-600 dark:text-indigo-400", icon: "graduation-cap" },
-    { title: "Ontario Secondary School Diploma", subtitle: "Earl Haig Secondary School", date: "2023 - 2025", description: "Graduated as Ontario Scholar (x2). Active in Library Club.", details: ["Library Club Member (2024 - 2025)", "Library Volunteer (Feb 2024 - June 2024)"], bg: "bg-blue-50 dark:bg-blue-500/10", color: "text-blue-600 dark:text-blue-400", icon: "school" }
+    { title: "Bachelor of Engineering", 
+        subtitle: "Lassonde School of Engineering - York University", 
+        date: "2025 - Present | Expected 2029", 
+        description: "Computer Engineering Student. Awarded York International Scholarship of Distinction.", 
+        details: ["ISAYU Event Coordinator (Sep 2025 - Present)", "Note Share & Class Rep @ MATH 1013 (Sep 2025 - Present)"], 
+        bg: "bg-indigo-50 dark:bg-indigo-500/10", 
+        color: "text-indigo-600 dark:text-indigo-400", 
+        icon: "graduation-cap" },
+
+    { title: "Ontario Secondary School Diploma", 
+        subtitle: "Earl Haig Secondary School", 
+        date: "2023 - 2025", 
+        description: "Graduated as Ontario Scholar (x2). Active in Library Club.", 
+        details: ["Library Club Member (2024 - 2025)", "Library Volunteer (Feb 2024 - June 2024)"], 
+        bg: "bg-blue-50 dark:bg-blue-500/10", 
+        color: "text-blue-600 dark:text-blue-400", 
+        icon: "school" }
 ];
 
 const currentProjectData = [
     { 
-    title: "LassondeHub", 
-    desc: "A centralized academic resource portal built for lassonde engineering students.", 
-    tech: ["HTML5", "Tailwind CSS", "JavaScript"], 
-    status: "Active Beta", 
-    link: "https://lassondehub.vercel.app/" }
+        title: "LassondeHub", 
+        desc: "A centralized academic resource portal built for lassonde engineering students.", 
+        tech: ["HTML5", "Tailwind CSS", "Vanilla JS"], 
+        status: "Active Beta", 
+        link: "https://lassondehub.vercel.app/",
+        icon: "zap",
+        color: "text-yellow-500"
+    },
+    { 
+        title: "Leetcoders", 
+        desc: "A community platform dedicated to mastering Data Structures and Algorithms.", 
+        tech: ["HTML5", "Tailwind CSS", "JavaScript"], 
+        status: "Active", 
+        link: "https://leetcoders.vercel.app/",
+        icon: "code-2",
+        color: "text-blue-500"
+    }
 ];
 
 const projectData = [
-    { title: "HawkEye", desc: "Built a web app for object detection during a 48-hour hackathon sprint. Integrated computer vision concepts with a frontend interface.", tech: ["HTML/CSS", "Python", "Computer Vision"], stars: "Hackathon", link: "https://github.com/parsaabba" }
+    { title: "HawkEye", 
+        desc: "Built a web app for object detection during a 48-hour hackathon sprint. Integrated computer vision concepts with a frontend interface.", 
+        tech: ["HTML/CSS", "Python", "Computer Vision"], 
+        stars: "Hackathon", 
+        link: "https://github.com/parsaabba" }
 ];
 
 const certificateData = [
-    { title: "MATLAB Onramp", org: "MathWorks", date: "Sep 2025", link: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=da86491c-0606-4558-8e0f-53ec6cd4842b&", bg: "bg-orange-50 dark:bg-orange-500/10", color: "text-orange-600 dark:text-orange-400", icon: "file-badge" },
+    { title: "MATLAB Onramp", 
+        org: "MathWorks", 
+        date: "Sep 2025", 
+        link: "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=da86491c-0606-4558-8e0f-53ec6cd4842b&", 
+        bg: "bg-orange-50 dark:bg-orange-500/10", 
+        color: "text-orange-600 dark:text-orange-400", 
+        icon: "file-badge" },
 ];
 
 const blogData = [
@@ -43,7 +80,6 @@ const blogData = [
         title: "My First Hackathon", 
         desc: "Lessons learned building 'HawkEye' in a 48-hour coding sprint.", 
         tags: ["Hackathon", "AI"],
-        // UPDATED PATH: Note the plural 'blogs' folder
         link: "pages/blogs/hackathon/my-first-hackathon.html" 
     },
 ];
@@ -61,26 +97,36 @@ const learningData = [
     {
         id: "dsa",
         title: "DSA Pattern Mastery",
-        desc: "A structured roadmap to mastering algorithmic patterns.",
+        desc: "Mastering Data Structures using the Thita.ai curriculum.",
         status: "In Progress",
         icon: "network",
         color: "text-purple-600 dark:text-purple-400",
         link: "pages/learning/dsa-pattern-mastery/learning-dsa-pattern-mastery.html",
-        sections: [] // CLEARED AS REQUESTED
+        sections: [] 
     },
     // --- C++ SECTION ---
     {
         id: "cpp",
         title: "C++ Programming",
-        desc: "Mastering memory management and high-performance apps.",
+        desc: "Mastering memory management, pointers, and OOP.",
         status: "In Progress",
         icon: "code-2",
         color: "text-blue-600 dark:text-blue-400",
         link: "pages/learning/cpp/learning-cpp.html",
         checklist: [
-            { task: "Day 1", done: true, summary: "A quick-start guide to C++ core concepts: syntax, data types, I/O, logic, and iteration.", link: "pages/learning/cpp/days/day1.html" },
-            { task: "Day 2", done: false, summary: "Variables, Data Types, and Basic I/O.", link: "pages/learning/cpp/days/day2.html" },
-            { task: "Day 3", done: false, summary: "Control Flow: Loops and Conditionals.", link: "pages/learning/cpp/days/day3.html" },
+            { task: "Day 1", 
+                done: true, 
+                date: "Dec 24", 
+                summary: "A quick-start guide to C++ core concepts: syntax, data types, I/O, logic, and iteration.", 
+                link: "pages/learning/cpp/days/day1.html" },
+            { task: "Day 2", 
+                done: false, 
+                date: "Dec 23", 
+                summary: "Variables, Data Types, and Basic I/O.", 
+                link: "pages/learning/cpp/days/day2.html" },
+            { task: "Day 3", done: false, 
+                summary: "Control Flow: Loops and Conditionals.", 
+                link: "pages/learning/cpp/days/day3.html" },
             { task: "Day 4", done: false, summary: "" },
             { task: "Day 5", done: false, summary: "" },
             { task: "Day 6", done: false, summary: "" },
@@ -120,17 +166,31 @@ const learningData = [
         color: "text-orange-600 dark:text-orange-400",
         link: "pages/learning/github/learning-github.html",
         levels: [
-            { title: "Level 1: The Foundation", desc: "Config, Init, Stage, Commit, and basic local workflow.", link: "pages/learning/github/levels/level1.html" },
-            { title: "Level 2: Branching & Merging", desc: "Working with branches, handling merges, and conflict resolution.", link: "pages/learning/github/levels/level2.html" },
-            { title: "Level 3: Collaboration", desc: "Remotes, Pull Requests (PRs), Code Reviews, and Forks.", link: "pages/learning/github/levels/level3.html" },
-            { title: "Level 4: Advanced Git", desc: "Rebasing, Cherry-picking, Stashing, and GitHub Actions.", link: "pages/learning/github/levels/level4.html" }
+            { title: "Level 1: The Foundation", 
+                desc: "Config, Init, Stage, Commit, and basic local workflow.", 
+                link: "pages/learning/github/levels/level1.html" },
+            { title: "Level 2: Branching & Merging", 
+                desc: "Working with branches, handling merges, and conflict resolution.", 
+                link: "pages/learning/github/levels/level2.html" },
+            { title: "Level 3: Collaboration", 
+                desc: "Remotes, Pull Requests (PRs), Code Reviews, and Forks.", 
+                link: "pages/learning/github/levels/level3.html" },
+            { title: "Level 4: Advanced Git", 
+                desc: "Rebasing, Cherry-picking, Stashing, and GitHub Actions.", 
+                link: "pages/learning/github/levels/level4.html" }
         ]
     }
 ];
 
 // --- RENDERERS ---
 const renderExperience = (item) => { const detailsHtml = item.details.map(det => `<li class="text-gray-600 dark:text-slate-400 mt-1 flex items-start gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-slate-600 shrink-0"></span> ${det}</li>`).join(''); return `<div class="relative pl-8 group mb-8 last:mb-0"><span class="absolute top-1 -left-[5px] w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-slate-700 border border-white dark:border-slate-900 group-hover:bg-primary transition-colors ring-4 ring-white dark:ring-slate-950"></span><h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">${item.title}</h3><p class="text-sm text-primary font-medium mb-1">${item.subtitle}</p><p class="text-xs text-gray-500 dark:text-slate-500 font-mono mb-3 uppercase tracking-wide">${item.date}</p><p class="text-gray-700 dark:text-slate-300 mb-2 leading-relaxed">${item.description}</p><ul class="text-sm">${detailsHtml}</ul></div>`; };
-const renderCurrentProject = (item) => { return `<a href="${item.link}" target="_blank" class="group block p-6 rounded-xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg dark:hover:bg-slate-800 transition-all"><div class="flex justify-between items-center mb-3"><div class="flex gap-2"><i data-lucide="zap" class="w-5 h-5 text-yellow-500"></i><span class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">${item.title}</span></div><span class="text-[10px] uppercase font-bold tracking-wide text-primary border border-primary/20 bg-primary/5 px-2 py-0.5 rounded-full">${item.status}</span></div><p class="text-sm text-gray-600 dark:text-slate-400 mb-4 line-clamp-2">${item.desc}</p><div class="flex flex-wrap gap-2">${item.tech.map(t => `<span class="text-xs text-gray-500 dark:text-slate-500 bg-gray-100 dark:bg-slate-800 px-2 py-1 rounded-md">${t}</span>`).join('')}</div></a>`; };
+const renderCurrentProject = (item) => { 
+    // Default to 'zap' and 'yellow' if you forget to add them to data
+    const iconName = item.icon || 'zap';
+    const iconColor = item.color || 'text-yellow-500';
+
+    return `<a href="${item.link}" target="_blank" class="group block p-6 rounded-xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg dark:hover:bg-slate-800 transition-all"><div class="flex justify-between items-center mb-3"><div class="flex gap-2"><i data-lucide="${iconName}" class="w-5 h-5 ${iconColor}"></i><span class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">${item.title}</span></div><span class="text-[10px] uppercase font-bold tracking-wide text-primary border border-primary/20 bg-primary/5 px-2 py-0.5 rounded-full">${item.status}</span></div><p class="text-sm text-gray-600 dark:text-slate-400 mb-4 line-clamp-2">${item.desc}</p><div class="flex flex-wrap gap-2">${item.tech.map(t => `<span class="text-xs text-gray-500 dark:text-slate-500 bg-gray-100 dark:bg-slate-800 px-2 py-1 rounded-md">${t}</span>`).join('')}</div></a>`; 
+};
 const renderProject = (item) => { return `<a href="${item.link}" target="_blank" class="group block p-6 rounded-xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-lg dark:hover:bg-slate-800 transition-all"><div class="flex justify-between items-center mb-3"><div class="flex gap-2"><i data-lucide="folder" class="w-5 h-5 text-primary"></i><span class="font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">${item.title}</span></div><div class="flex items-center gap-1 text-gray-500 dark:text-slate-500 text-xs">${item.stars === 'Hackathon' ? '<i data-lucide="trophy" class="w-3 h-3 text-yellow-500"></i>' : '<i data-lucide="star" class="w-3 h-3"></i>'} ${item.stars}</div></div><p class="text-sm text-gray-600 dark:text-slate-400 mb-4 line-clamp-2">${item.desc}</p><div class="flex flex-wrap gap-2">${item.tech.map(t => `<span class="text-xs text-gray-500 dark:text-slate-500 bg-gray-100 dark:bg-slate-800 px-2 py-1 rounded-md">${t}</span>`).join('')}</div></a>`; };
 const renderCertificate = (item) => { return `<a href="${item.link}" target="_blank" class="group block p-5 rounded-xl bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:border-primary/50 dark:hover:border-primary/50 hover:shadow-md dark:hover:bg-slate-800 transition-all"><div class="flex justify-between items-start mb-4"><div class="p-2 rounded-lg ${item.bg} ${item.color} group-hover:scale-110 transition-transform"><i data-lucide="${item.icon}" class="w-6 h-6"></i></div><i data-lucide="external-link" class="w-4 h-4 text-gray-400 dark:text-slate-600 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"></i></div><h4 class="font-bold text-gray-900 dark:text-white mb-1 group-hover:text-primary transition-colors">${item.title}</h4><p class="text-xs text-gray-500 dark:text-slate-500">${item.org} • ${item.date}</p></a>`; };
 const renderBlog = (item) => { 
@@ -254,7 +314,7 @@ function renderDSACourse(dataId) {
     lucide.createIcons();
 }
 
-// --- RENDER CALENDAR OR LEVELS (UPDATED) ---
+// --- RENDER CALENDAR OR LEVELS (UPDATED: Faint Green Style) ---
 function renderCalendar(dataId) {
     const container = document.getElementById(dataId + '-calendar-view');
     if (!container) return;
@@ -264,11 +324,9 @@ function renderCalendar(dataId) {
 
     container.innerHTML = '';
 
-    // MODE 1: LEVELS (For GitHub)
+    // MODE 1: LEVELS (For GitHub) - No changes here
     if (data.levels) {
-        // Ensure the container is a grid for cards
         container.className = "grid grid-cols-1 md:grid-cols-2 gap-6";
-        
         data.levels.forEach((level, index) => {
             const html = `
                 <a href="${root}${level.link}" class="group block p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg h-full">
@@ -283,22 +341,31 @@ function renderCalendar(dataId) {
             container.innerHTML += html;
         });
         lucide.createIcons();
-        return; // Exit function, don't look for checklist
+        return; 
     }
 
-    // MODE 2: CHECKLIST (For C++)
+    // MODE 2: CHECKLIST (For C++) - CHANGES HERE
     if (data.checklist) {
-        // Ensure container is a grid for calendar days
         container.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4";
 
         data.checklist.forEach((item, index) => {
             const dayNumber = index + 1;
-            const statusClass = item.done ? 'bg-green-500 text-white border-green-600 hover:bg-green-600 shadow-md' : 'bg-white dark:bg-slate-900 text-gray-500 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:shadow-lg';
+            
+            // 1. UPDATED: Fainter green colors for completed state
+            const statusClass = item.done 
+                ? 'bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-900/30' 
+                : 'bg-white dark:bg-slate-900 text-gray-500 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:shadow-lg';
+
+            // 2. UPDATED: Simpler date style for faintly colored boxes
+            const dateHtml = (item.done && item.date) 
+                ? `<span class="text-[10px] font-medium mt-1 opacity-75">${item.date}</span>` 
+                : '';
 
             const html = `
                 <div class="${statusClass} border rounded-xl h-24 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden group">
                     <span class="text-[10px] font-bold uppercase tracking-wider opacity-70 mb-1">Day</span>
-                    <span class="text-2xl font-bold">${dayNumber}</span>
+                    <span class="text-2xl font-bold leading-none">${dayNumber}</span>
+                    ${dateHtml}
                     ${item.done ? '<i data-lucide="check" class="absolute top-2 right-2 w-4 h-4 opacity-50"></i>' : ''}
                 </div>
             `;
@@ -307,7 +374,6 @@ function renderCalendar(dataId) {
             wrapper.innerHTML = html;
             const element = wrapper.firstElementChild;
             
-            // Universal Click Logic -> Modal
             element.addEventListener('click', () => openModal(item));
             
             container.appendChild(element);
