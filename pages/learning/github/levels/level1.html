@@ -94,7 +94,7 @@
                         </div>
                     </li>
                     <li>
-                        <strong>Initialize Git:</strong> (Tells Git to watch this folder) 
+                        <strong>Initialize Git:</strong> (Tells Git to watch this folder)
                         <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-2 font-mono text-sm text-slate-300">
                             <span class="text-green-400">git</span> init
                         </div>
@@ -150,7 +150,7 @@
                     <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">5</span> 
                     Connecting to GitHub
                 </h2>
-                <ol class="space-y-4 list-decimal list-inside text-gray-700 dark:text-slate-300">
+                <ol class="space-y-6 list-decimal list-inside text-gray-700 dark:text-slate-300">
                     <li>Go to <strong>github.com</strong> and create a <span class="font-bold">New Repository</span> named <code>MyWebProject</code>.</li>
                     <li><span class="text-red-500 font-bold">Important:</span> Keep "Add a README" unchecked.</li>
                     <li>Copy the URL (e.g., <code>https://github.com/User/Repo.git</code>).</li>
@@ -166,6 +166,10 @@
                             git branch -M main<br>
                             git push -u origin main
                         </div>
+                        <p class="text-xs text-purple-600 dark:text-purple-400 mt-2 bg-purple-50 dark:bg-purple-900/10 p-2 rounded border border-purple-100 dark:border-purple-800/30">
+                            <i data-lucide="info" class="w-3 h-3 inline mr-1"></i>
+                            The <strong>-u</strong> flag stands for "Upstream" (technically <code>--set-upstream</code>). It links your local branch to the GitHub one so you can just type <code>git push</code> later.
+                        </p>
                     </li>
                 </ol>
             </section>
