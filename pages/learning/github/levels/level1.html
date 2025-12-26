@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1: The Foundation | Git Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: '#6366f1' } } }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-300 font-sans transition-colors duration-300">
+    
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-white/5 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md transition-colors duration-300">
+        <div class="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
+            <a href="../learning-github.html" class="flex items-center gap-2 text-gray-500 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i> <span class="hidden sm:inline">Back to Levels</span>
+            </a>
+            <button id="theme-toggle" class="p-2 text-gray-500 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors focus:outline-none">
+                <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 pt-32 pb-20">
+        
+        <div class="mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400 text-xs font-bold uppercase tracking-wider mb-4">Level 1</div>
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">The Foundation</h1>
+            <p class="text-lg text-gray-600 dark:text-slate-400">Understanding the core difference between Git and GitHub, and setting up your first repository.</p>
+        </div>
+
+        <div class="space-y-16">
+            
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">1</span> 
+                    The Big Picture
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl">
+                        <div class="flex items-center gap-2 mb-3 text-orange-600 dark:text-orange-400 font-bold">
+                            <i data-lucide="hard-drive" class="w-5 h-5"></i> Git
+                        </div>
+                        <p class="text-sm leading-relaxed">A <strong>"Time Machine"</strong> on your computer. It saves versions of your files locally. You <span class="underline decoration-orange-500/50">don't need internet</span> to use it.</p>
+                    </div>
+                    <div class="p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl">
+                        <div class="flex items-center gap-2 mb-3 text-purple-600 dark:text-purple-400 font-bold">
+                            <i data-lucide="cloud" class="w-5 h-5"></i> GitHub
+                        </div>
+                        <p class="text-sm leading-relaxed">A <strong>"Cloud Storage"</strong> (like Google Drive) for your Git history. It lets you share your work with others online.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">2</span> 
+                    First-Time Setup
+                </h2>
+                <p class="mb-4 text-gray-600 dark:text-slate-400">Before you can save anything, you must introduce yourself to Git. Open your terminal and run these once:</p>
+                
+                <div class="bg-slate-950 rounded-xl overflow-hidden border border-slate-800 font-mono text-sm">
+                    <div class="flex gap-2 p-3 border-b border-slate-800 bg-slate-900/50">
+                        <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                    </div>
+                    <div class="p-5 space-y-2 text-slate-300">
+                        <p><span class="text-green-400">git</span> config --global user.name <span class="text-yellow-300">"Your Name"</span></p>
+                        <p><span class="text-green-400">git</span> config --global user.email <span class="text-yellow-300">"your.email@example.com"</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">3</span> 
+                    Starting a Local Web Project
+                </h2>
+                <ol class="space-y-6 list-decimal list-inside text-gray-700 dark:text-slate-300">
+                    <li>
+                        <strong>Create a folder:</strong>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-2 font-mono text-sm text-slate-300">
+                            mkdir MyWebProject<br>
+                            cd MyWebProject
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Initialize Git:</strong> (Tells Git to watch this folder) 
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-2 font-mono text-sm text-slate-300">
+                            <span class="text-green-400">git</span> init
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1 italic">You will see "Initialized empty Git repository".</p>
+                    </li>
+                    <li>
+                        <strong>Create your HTML file:</strong>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-2 font-mono text-sm text-slate-300">
+                            &lt;h1&gt;Hello World&lt;/h1&gt;<br>
+                            &lt;p&gt;This is my first Git project!&lt;/p&gt;
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">4</span> 
+                    The Saving Workflow (Loop)
+                </h2>
+                <div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="eye" class="text-primary w-5 h-5"></i></div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 dark:text-white">1. Check Status</h3>
+                                <p class="text-sm text-gray-600 dark:text-slate-400 mb-2">See what Git sees. New files will be red.</p>
+                                <code class="bg-slate-950 text-green-400 px-2 py-1 rounded text-xs font-mono">git status</code>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="plus-circle" class="text-primary w-5 h-5"></i></div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 dark:text-white">2. Stage (Add)</h3>
+                                <p class="text-sm text-gray-600 dark:text-slate-400 mb-2">Move file to the "Waiting Room".</p>
+                                <code class="bg-slate-950 text-green-400 px-2 py-1 rounded text-xs font-mono">git add index.html</code>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="save" class="text-primary w-5 h-5"></i></div>
+                            <div>
+                                <h3 class="font-bold text-gray-900 dark:text-white">3. Commit (Save)</h3>
+                                <p class="text-sm text-gray-600 dark:text-slate-400 mb-2">Take a permanent snapshot.</p>
+                                <code class="bg-slate-950 text-green-400 px-2 py-1 rounded text-xs font-mono">git commit -m "Created homepage"</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">5</span> 
+                    Connecting to GitHub
+                </h2>
+                <ol class="space-y-4 list-decimal list-inside text-gray-700 dark:text-slate-300">
+                    <li>Go to <strong>github.com</strong> and create a <span class="font-bold">New Repository</span> named <code>MyWebProject</code>.</li>
+                    <li><span class="text-red-500 font-bold">Important:</span> Keep "Add a README" unchecked.</li>
+                    <li>Copy the URL (e.g., <code>https://github.com/User/Repo.git</code>).</li>
+                    <li>
+                        <strong>Link your terminal:</strong>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-2 font-mono text-sm text-slate-300">
+                            git remote add origin &lt;PASTE-URL-HERE&gt;
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Rename Branch & Push:</strong>
+                        <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 mt-2 font-mono text-sm text-slate-300">
+                            git branch -M main<br>
+                            git push -u origin main
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mt-12">
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 shadow-xl border border-gray-700">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="file-text" class="text-primary"></i>
+                        <h2 class="text-2xl font-bold">Mastery Notes: Cheat Sheet</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-bold text-primary mb-2">1. Setup (One time only)</h3>
+                            <ul class="list-disc list-inside text-sm text-gray-300 space-y-1 font-mono">
+                                <li>git config --global user.name "My Name"</li>
+                                <li>git config --global user.email "me@example.com"</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-primary mb-2">2. The Loop</h3>
+                            <ul class="list-disc list-inside text-sm text-gray-300 space-y-1 font-mono">
+                                <li>git status <span class="text-gray-500">// Check changes</span></li>
+                                <li>git add . <span class="text-gray-500">// Stage ALL files</span></li>
+                                <li>git commit -m "Message" <span class="text-gray-500">// Save snapshot</span></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-primary mb-2">3. Uploading</h3>
+                            <ul class="list-disc list-inside text-sm text-gray-300 space-y-1 font-mono">
+                                <li>git push <span class="text-gray-500">// Uploads code (after first setup)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../../../../js/script.js"></script>
+</body>
+</html>
