@@ -54,6 +54,15 @@ const currentProjectData = [
         link: "https://leetcoders.vercel.app/",
         icon: "code-2",
         color: "text-blue-500"
+    },
+    { 
+        title: "AlgoDrift", 
+        desc: "A high-performance, framework-free visualizer for algorithms and data structures.", 
+        tech: ["HTML5", "CSS3", "Vanilla JS"], 
+        status: "Active", 
+        link: "https://algodrift.vercel.app/",
+        icon: "bar-chart-2", 
+        color: "text-purple-500" 
     }
 ];
 
