@@ -111,48 +111,14 @@ const learningData = [
         icon: "network",
         color: "text-purple-600 dark:text-purple-400",
         link: "pages/learning/dsa-pattern-mastery/learning-dsa-pattern-mastery.html",
-              checklist: [
-            { task: "Day 1", 
-                done: true, 
-                date: "Dec 24", 
-                summary: "A quick-start guide to C++ core concepts: syntax, data types, I/O, logic, and iteration.", 
-                link: "pages/learning/cpp/days/day1.html" },
-            { task: "Day 2", 
-                done: false, 
-                date: "Dec 23", 
-                summary: "Variables, Data Types, and Basic I/O.", 
-                link: "pages/learning/cpp/days/day2.html" },
-            { task: "Day 3", done: false, 
-                summary: "Control Flow: Loops and Conditionals.", 
-                link: "pages/learning/cpp/days/day3.html" },
-            { task: "Day 4", done: false, summary: "" },
-            { task: "Day 5", done: false, summary: "" },
-            { task: "Day 6", done: false, summary: "" },
-            { task: "Day 7", done: false, summary: "" },
-            { task: "Day 8", done: false, summary: "" },
-            { task: "Day 9", done: false, summary: "" },
-            { task: "Day 10", done: false, summary: "" },
-            { task: "Day 11", done: false, summary: "" },
-            { task: "Day 12", done: false, summary: "" },
-            { task: "Day 13", done: false, summary: "" },
-            { task: "Day 14", done: false, summary: "" },
-            { task: "Day 15", done: false, summary: "" },
-            { task: "Day 16", done: false, summary: "" },
-            { task: "Day 17", done: false, summary: "" },
-            { task: "Day 18", done: false, summary: "" },
-            { task: "Day 19", done: false, summary: "" },
-            { task: "Day 20", done: false, summary: "" },
-            { task: "Day 21", done: false, summary: "" },
-            { task: "Day 22", done: false, summary: "" },
-            { task: "Day 23", done: false, summary: "" },
-            { task: "Day 24", done: false, summary: "" },
-            { task: "Day 25", done: false, summary: "" },
-            { task: "Day 26", done: false, summary: "" },
-            { task: "Day 27", done: false, summary: "" },
-            { task: "Day 28", done: false, summary: "" },
-            { task: "Day 29", done: false, summary: "" },
-            { task: "Day 30", done: false, summary: "" }
-        ]
+        // Use 'checklist' so it creates the grid boxes
+        checklist: [
+            { task: "Day 1", done: true, date: "Dec 30", summary: "Big-O Notation & Array basics.", link: "pages/learning/dsa-pattern-mastery/days/day1.html" },
+            { task: "Day 2", done: false, summary: "Sliding Window Pattern.", link: "pages/learning/dsa-pattern-mastery/days/day2.html" },
+            { task: "Day 3", done: false, summary: "Two Pointers Pattern.", link: "pages/learning/dsa-pattern-mastery/days/day3.html" },
+            { task: "Day 4", done: false, summary: "Fast & Slow Pointers." },
+            { task: "Day 5", done: false, summary: "Merge Intervals." }
+    ]
     },
     // --- C++ SECTION ---
     {
@@ -166,8 +132,8 @@ const learningData = [
         checklist: [
             { task: "Day 1", 
                 done: true, 
-                date: "Dec 30", 
-                summary: "Learning Big-O and Array", 
+                date: "Dec 24", 
+                summary: "A quick-start guide to C++ core concepts: syntax, data types, I/O, logic, and iteration.", 
                 link: "pages/learning/cpp/days/day1.html" },
             { task: "Day 2", 
                 done: false, 
@@ -499,9 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
     injectContent(thoughtData, 'thought-list-full', renderThought); 
     injectContent(learningData, 'learning-list-full', renderLearning); 
 
-    renderDSACourse('dsa'); 
-    
-    // RENDER CALENDARS BY ID
+    renderCalendar('dsa'); 
     renderCalendar('cpp'); 
     renderCalendar('github');
 
