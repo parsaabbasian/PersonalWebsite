@@ -152,33 +152,33 @@
             link: "pages/learning/golang/learning-golang.html",
             checklist: [
                 { task: "Day 1", done: true, date: "Jan 02", summary: "Go Installation", link: "pages/learning/golang/days/day01.html" },
-                { task: "Day 2", done: false, summary: "Variables & Types", link: "pages/learning/golang/days/day02.html" },
-                { task: "Day 3", done: false, summary: "Control Flow", link: "pages/learning/golang/days/day03.html" },
-                { task: "Day 4", done: false, summary: "Loops", link: "pages/learning/golang/days/day04.html" },
-                { task: "Day 5", done: false, summary: "Functions", link: "pages/learning/golang/days/day05.html" },
-                { task: "Day 6", done: false, summary: "Basic I/O", link: "pages/learning/golang/days/day06.html" },
-                { task: "Day 7", done: false, summary: "W1 Project", link: "pages/learning/golang/days/day07.html" },
-                { task: "Day 8", done: false, summary: "Slices & Arrays", link: "pages/learning/golang/days/day08.html" },
-                { task: "Day 9", done: false, summary: "Maps & Range", link: "pages/learning/golang/days/day09.html" },
-                { task: "Day 10", done: false, summary: "Structs", link: "pages/learning/golang/days/day10.html" },
-                { task: "Day 11", done: false, summary: "Pointers", link: "pages/learning/golang/days/day11.html" },
-                { task: "Day 12", done: false, summary: "Error Handling", link: "pages/learning/golang/days/day12.html" },
-                { task: "Day 13", done: false, summary: "Packages", link: "pages/learning/golang/days/day13.html" },
-                { task: "Day 14", done: false, summary: "W2 Project", link: "pages/learning/golang/days/day14.html" },
-                { task: "Day 15", done: false, summary: "Goroutines", link: "pages/learning/golang/days/day15.html" },
-                { task: "Day 16", done: false, summary: "Channels", link: "pages/learning/golang/days/day16.html" },
-                { task: "Day 17", done: false, summary: "Advanced Channels", link: "pages/learning/golang/days/day17.html" },
-                { task: "Day 18", done: false, summary: "Sync", link: "pages/learning/golang/days/day18.html" },
-                { task: "Day 19", done: false, summary: "Flow Control", link: "pages/learning/golang/days/day19.html" },
-                { task: "Day 20", done: false, summary: "Std Library", link: "pages/learning/golang/days/day20.html" },
-                { task: "Day 21", done: false, summary: "W3 Project", link: "pages/learning/golang/days/day21.html" },
-                { task: "Day 22", done: false, summary: "Go Modules", link: "pages/learning/golang/days/day22.html" },
-                { task: "Day 23", done: false, summary: "HTTP Servers", link: "pages/learning/golang/days/day23.html" },
-                { task: "Day 24", done: false, summary: "JSON & API", link: "pages/learning/golang/days/day24.html" },
-                { task: "Day 25", done: false, summary: "Environment", link: "pages/learning/golang/days/day25.html" },
-                { task: "Day 26", done: false, summary: "Best Practices", link: "pages/learning/golang/days/day26.html" },
-                { task: "Day 27", done: false, summary: "Final Project", link: "pages/learning/golang/days/day27.html" },
-                { task: "Day 28", done: false, summary: "Graduation", link: "pages/learning/golang/days/day28.html" }
+                // { task: "Day 2", done: false, summary: "Variables & Types", link: "pages/learning/golang/days/day02.html" },
+                // { task: "Day 3", done: false, summary: "Control Flow", link: "pages/learning/golang/days/day03.html" },
+                // { task: "Day 4", done: false, summary: "Loops", link: "pages/learning/golang/days/day04.html" },
+                // { task: "Day 5", done: false, summary: "Functions", link: "pages/learning/golang/days/day05.html" },
+                // { task: "Day 6", done: false, summary: "Basic I/O", link: "pages/learning/golang/days/day06.html" },
+                // { task: "Day 7", done: false, summary: "W1 Project", link: "pages/learning/golang/days/day07.html" },
+                // { task: "Day 8", done: false, summary: "Slices & Arrays", link: "pages/learning/golang/days/day08.html" },
+                // { task: "Day 9", done: false, summary: "Maps & Range", link: "pages/learning/golang/days/day09.html" },
+                // { task: "Day 10", done: false, summary: "Structs", link: "pages/learning/golang/days/day10.html" },
+                // { task: "Day 11", done: false, summary: "Pointers", link: "pages/learning/golang/days/day11.html" },
+                // { task: "Day 12", done: false, summary: "Error Handling", link: "pages/learning/golang/days/day12.html" },
+                // { task: "Day 13", done: false, summary: "Packages", link: "pages/learning/golang/days/day13.html" },
+                // { task: "Day 14", done: false, summary: "W2 Project", link: "pages/learning/golang/days/day14.html" },
+                // { task: "Day 15", done: false, summary: "Goroutines", link: "pages/learning/golang/days/day15.html" },
+                // { task: "Day 16", done: false, summary: "Channels", link: "pages/learning/golang/days/day16.html" },
+                // { task: "Day 17", done: false, summary: "Advanced Channels", link: "pages/learning/golang/days/day17.html" },
+                // { task: "Day 18", done: false, summary: "Sync", link: "pages/learning/golang/days/day18.html" },
+                // { task: "Day 19", done: false, summary: "Flow Control", link: "pages/learning/golang/days/day19.html" },
+                // { task: "Day 20", done: false, summary: "Std Library", link: "pages/learning/golang/days/day20.html" },
+                // { task: "Day 21", done: false, summary: "W3 Project", link: "pages/learning/golang/days/day21.html" },
+                // { task: "Day 22", done: false, summary: "Go Modules", link: "pages/learning/golang/days/day22.html" },
+                // { task: "Day 23", done: false, summary: "HTTP Servers", link: "pages/learning/golang/days/day23.html" },
+                // { task: "Day 24", done: false, summary: "JSON & API", link: "pages/learning/golang/days/day24.html" },
+                // { task: "Day 25", done: false, summary: "Environment", link: "pages/learning/golang/days/day25.html" },
+                // { task: "Day 26", done: false, summary: "Best Practices", link: "pages/learning/golang/days/day26.html" },
+                // { task: "Day 27", done: false, summary: "Final Project", link: "pages/learning/golang/days/day27.html" },
+                // { task: "Day 28", done: false, summary: "Graduation", link: "pages/learning/golang/days/day28.html" }
             ]
         },
         {
@@ -191,9 +191,26 @@
             link: "pages/learning/cpp/learning-cpp.html",
             checklist: [
                 { task: "Day 1", done: true, date: "Dec 24", summary: "Syntax, data types, I/O, logic, and iteration.", link: "pages/learning/cpp/days/day1.html" }
-                // ... rest of your data
             ]
-        }
+        },
+        {
+            id: "flask",
+            title: "Flask Web Development",
+            desc: "Building lightweight and scalable web applications with Python.",
+            status: "In Progress",
+            icon: "server",
+            color: "text-emerald-500 dark:text-emerald-400",
+            link: "pages/learning/flask/learning-flask.html",
+            checklist: [
+                // { task: "Day 1", done: true, date: "Jan 04", summary: "Environment Setup & Hello World", link: "pages/learning/flask/days/day01.html" },
+                // { task: "Day 2", done: false, summary: "Routing & Dynamic URLs", link: "pages/learning/flask/days/day02.html" },
+                // { task: "Day 3", done: false, summary: "Jinja2 Templates & Static Files", link: "pages/learning/flask/days/day03.html" },
+                // { task: "Day 4", done: false, summary: "Request Handling & Forms", link: "pages/learning/flask/days/day04.html" },
+                // { task: "Day 5", done: false, summary: "SQLAlchemy & Database Integration", link: "pages/learning/flask/days/day05.html" },
+                // { task: "Day 6", done: false, summary: "RESTful API Basics", link: "pages/learning/flask/days/day06.html" },
+                // { task: "Day 7", done: false, summary: "Deployment & Final Mini-Project", link: "pages/learning/flask/days/day07.html" }
+            ]
+        },
     ];
 
     // --- RENDERERS ---
