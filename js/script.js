@@ -202,16 +202,179 @@
             color: "text-emerald-500 dark:text-emerald-400",
             link: "pages/learning/flask/learning-flask.html",
             checklist: [
-                // { task: "Day 1", done: true, date: "Jan 04", summary: "Environment Setup & Hello World", link: "pages/learning/flask/days/day01.html" },
-                // { task: "Day 2", done: false, summary: "Routing & Dynamic URLs", link: "pages/learning/flask/days/day02.html" },
-                // { task: "Day 3", done: false, summary: "Jinja2 Templates & Static Files", link: "pages/learning/flask/days/day03.html" },
-                // { task: "Day 4", done: false, summary: "Request Handling & Forms", link: "pages/learning/flask/days/day04.html" },
-                // { task: "Day 5", done: false, summary: "SQLAlchemy & Database Integration", link: "pages/learning/flask/days/day05.html" },
-                // { task: "Day 6", done: false, summary: "RESTful API Basics", link: "pages/learning/flask/days/day06.html" },
-                // { task: "Day 7", done: false, summary: "Deployment & Final Mini-Project", link: "pages/learning/flask/days/day07.html" }
+                { task: "Day 1", done: true, date: "Jan 04", summary: "Environment Setup & Hello World", link: "pages/learning/flask/days/day01.html" },
+                { task: "Day 2", done: true, summary: "Routing & Dynamic URLs", link: "pages/learning/flask/days/day02.html" },
+                { task: "Day 3", done: true, summary: "Jinja2 Templates & Static Files", link: "pages/learning/flask/days/day03.html" },
+                { task: "Day 4", done: true, summary: "Request Handling & Forms", link: "pages/learning/flask/days/day04.html" },
+                { task: "Day 5", done: true, summary: "SQLAlchemy & Database Integration", link: "pages/learning/flask/days/day05.html" },
+                { task: "Day 6", done: true, summary: "RESTful API Basics", link: "pages/learning/flask/days/day06.html" },
+                { task: "Day 7", done: true, summary: "Deployment & Final Mini-Project", link: "pages/learning/flask/days/day07.html" }
             ]
         },
-    ];
+        {
+        id: "rust-core-mastery",
+        title: "Rust Programming",
+        desc: "Mastering memory safety, concurrency, and performance with the Rust language.",
+        status: "In Progress",
+        icon: "cpu",
+        color: "text-orange-600 dark:text-orange-500",
+        link: "pages/learning/rust/learning-rust.html",
+        checklist: [
+            { task: "Day 0", done: true, summary: "Toolchain, Cargo & Variables", link: "pages/learning/rust/days/day01.html" },
+            { task: "Day 1", done: true, summary: "Toolchain, Cargo & Variables", link: "pages/learning/rust/days/day01.html" },
+            { task: "Day 2", done: false, summary: "The Borrow Checker: Ownership & Borrowing", link: "pages/learning/rust/days/day02.html" },
+            { task: "Day 3", done: false, summary: "Structs, Enums & Pattern Matching", link: "pages/learning/rust/days/day03.html" },
+            { task: "Day 4", done: false, summary: "Error Handling (Option & Result)", link: "pages/learning/rust/days/day04.html" },
+            { task: "Day 5", done: false, summary: "Traits, Generics & Lifetimes", link: "pages/learning/rust/days/day05.html" },
+            { task: "Day 6", done: false, summary: "Smart Pointers & Memory Management", link: "pages/learning/rust/days/day06.html" },
+            { task: "Day 7", done: false, summary: "Fearless Concurrency & Threads", link: "pages/learning/rust/days/day07.html" }
+        ]
+        },
+        {
+            id: "machine-learning",
+            title: "Machine Learning Fundamentals",
+            desc: "Mastering the mathematical intuition and practical implementation of ML from foundations to Scikit-learn.",
+            status: "In Progress",
+            icon: "brain-circuit",
+            color: "text-indigo-600 dark:text-indigo-400",
+            link: "pages/learning/machine-learning/machine-learning.html",
+            levels: [
+                { title: "Block 1: Foundations", desc: "ML vs traditional programming, problem framing, and real-world use cases.", link: "pages/learning/ml/blocks/b01.html" },
+                { title: "Block 2: Supervised Learning", desc: "Labeled data, features vs labels, and loss function intuition.", link: "pages/learning/ml/blocks/b02.html" },
+                { title: "Block 3: Unsupervised Learning", desc: "Clustering, similarity metrics, and exploratory data analysis.", link: "pages/learning/ml/blocks/b03.html" },
+                { title: "Block 4: Data Stack", desc: "Vectorization with NumPy and data manipulation with Pandas.", link: "pages/learning/ml/blocks/b04.html" },
+                { title: "Block 5: Regression", desc: "Linear regression, MSE/MAE, and Gradient Descent conceptualization.", link: "pages/learning/ml/blocks/b05.html" },
+                { title: "Block 6: Classification", desc: "Logistic regression, Decision Boundaries, and k-NN/Trees.", link: "pages/learning/ml/blocks/b06.html" },
+                { title: "Block 7: Evaluation Metrics", desc: "Confusion matrices, Precision, Recall, F1, and AUC/ROC.", link: "pages/learning/ml/blocks/b07.html" },
+                { title: "Block 8: Clustering", desc: "K-means step-by-step, distance metrics, and choosing K.", link: "pages/learning/ml/blocks/b08.html" },
+                { title: "Block 9: Bias-Variance", desc: "The tradeoff, learning curves, and diagnosing models.", link: "pages/learning/ml/blocks/b09.html" },
+                { title: "Block 10: Regularization", desc: "Overfitting, data leakage, and L1/L2 (Lasso/Ridge) intuition.", link: "pages/learning/ml/blocks/b10.html" },
+                { title: "Block 11: Validation", desc: "Train/Val/Test splits and threshold tuning.", link: "pages/learning/ml/blocks/b11.html" },
+                { title: "Block 12: Scikit-learn Mastery", desc: "Pipelines, fit/predict API, and model comparison.", link: "pages/learning/ml/blocks/b12.html" },
+                { title: "Block 13: Workflow", desc: "End-to-End ML projects: From dataset to deployment metrics.", link: "pages/learning/ml/blocks/b13.html" }
+            ]
+        },
+        {
+            id: "deep-learning",
+            title: "Deep Learning & Neural Networks",
+            desc: "A high-intensity dive into neural architectures, from perceptrons and backprop to Transformers and Attention mechanisms.",
+            status: "In Progress",
+            icon: "layers",
+            color: "text-violet-600 dark:text-violet-400",
+            link: "pages/learning/deep-learning/deep-learning.html",
+            levels: [
+                { title: "Block 1: Foundations", desc: "Neurons, Weights, Bias, and the math of dot products.", link: "pages/learning/dl/blocks/b01.html" },
+                { title: "Block 2: Activation Functions", desc: "Non-linearity: Sigmoid, ReLU, Softmax, and vanishing gradients.", link: "pages/learning/dl/blocks/b02.html" },
+                { title: "Block 3: ANNs", desc: "Multi-layer perceptrons, forward propagation, and PyTorch basics.", link: "pages/learning/dl/blocks/b03.html" },
+                { title: "Block 4: Optimization", desc: "Loss functions (Cross-Entropy) and Optimizers like Adam/SGD.", link: "pages/learning/dl/blocks/b04.html" },
+                { title: "Block 5: Backpropagation", desc: "CRITICAL: Chain rule, gradient flow, and manual computation.", link: "pages/learning/dl/blocks/b05.html" },
+                { title: "Block 6: Training Logic", desc: "Regularization, Dropout, and Early Stopping implementation.", link: "pages/learning/dl/blocks/b06.html" },
+                { title: "Block 7: PyTorch Deep Dive", desc: "Autograd, Tensors, and custom training pipelines.", link: "pages/learning/dl/blocks/b07.html" },
+                { title: "Block 8: CNNs", desc: "Convolutional layers, pooling, and image feature maps.", link: "pages/learning/dl/blocks/b08.html" },
+                { title: "Block 9: CNN Architectures", desc: "Batch Norm, Transfer Learning, and ResNet/VGG intuition.", link: "pages/learning/dl/blocks/b09.html" },
+                { title: "Block 10: RNNs", desc: "Sequential data, hidden states, and temporal dependencies.", link: "pages/learning/dl/blocks/b10.html" },
+                { title: "Block 11: LSTM & GRU", desc: "Gated units and long-term memory in sequences.", link: "pages/learning/dl/blocks/b11.html" },
+                { title: "Block 12: Transformers", desc: "Attention mechanism, Self-attention, and the 'Attention is All You Need' logic.", link: "pages/learning/dl/blocks/b12.html" },
+                { title: "Block 13: TF/Keras", desc: "Rebuilding PyTorch logic in the TensorFlow ecosystem.", link: "pages/learning/dl/blocks/b13.html" }
+            ]
+        },
+        {
+        id: "data-engineering",
+        title: "Data Engineering & Preprocessing",
+        desc: "The foundation of reliable AI. Mastering the art of transforming raw, messy data into high-performance feature sets.",
+        status: "In Progress",
+        icon: "database",
+        color: "text-teal-600 dark:text-teal-400",
+        link: "pages/learning/data-engineering/learning-data-engineering.html",
+        levels: [
+            { title: "Block 1: Role of Data", desc: "Understanding why Data Engineering is the backbone of ML performance.", link: "pages/learning/data-engineering/blocks/b01.html" },
+            { title: "Block 2: Data Types", desc: "Structured vs. Unstructured and the intuition of tabular schemas.", link: "pages/learning/data-engineering/blocks/b02.html" },
+            { title: "Block 3: Data Sources", desc: "Working with SQL, APIs, and JSON while judging data trustworthiness.", link: "pages/learning/data-engineering/blocks/b03.html" },
+            { title: "Block 4: EDA", desc: "Exploratory Data Analysis: Distributions, skewness, and spotting anomalies.", link: "pages/learning/data-engineering/blocks/b04.html" },
+            { title: "Block 5: Missing Data", desc: "Imputation strategies: Mean, Median, Mode, and Time-series fills.", link: "pages/learning/data-engineering/blocks/b05.html" },
+            { title: "Block 6: Dirty Data", desc: "Outlier detection (IQR/Z-score) and fixing inconsistent formatting.", link: "pages/learning/data-engineering/blocks/b06.html" },
+            { title: "Block 7: Scaling", desc: "Min-Max scaling vs. Standardization and why models need it.", link: "pages/learning/data-engineering/blocks/b07.html" },
+            { title: "Block 8: Encoding", desc: "One-Hot vs. Label encoding and managing the curse of dimensionality.", link: "pages/learning/data-engineering/blocks/b08.html" },
+            { title: "Block 9: Feature Engineering", desc: "CORE SKILL: Creating ratios, aggregations, and domain-based inputs.", link: "pages/learning/data-engineering/blocks/b09.html" },
+            { title: "Block 10: Feature Selection", desc: "Reducing noise via correlation filtering and variance thresholds.", link: "pages/learning/data-engineering/blocks/b10.html" },
+            { title: "Block 11: Scaling Up", desc: "Handling large datasets: Chunking, sampling, and memory optimization.", link: "pages/learning/data-engineering/blocks/b11.html" },
+            { title: "Block 12: Data Pipelines", desc: "Production thinking: Reproducibility and versioning features.", link: "pages/learning/data-engineering/blocks/b12.html" },
+            { title: "Block 13: Capstone", desc: "End-to-End: Raw data to a production-ready ML dataset.", link: "pages/learning/data-engineering/blocks/b13.html" }
+        ]
+        },
+        {
+        id: "model-deployment",
+        title: "Model Deployment & MLOps",
+        desc: "Closing the gap between research and production. Engineering robust, scalable, and monitored ML systems.",
+        status: "In Progress",
+        icon: "rocket",
+        color: "text-rose-600 dark:text-rose-400",
+        link: "pages/learning/learning-mlops/learning-mlops.html",
+        levels: [
+            { title: "Block 1: Intro to MLOps", desc: "DevOps vs. MLOps: Understanding the ML lifecycle and system failure points.", link: "pages/learning/mlops/blocks/b01.html" },
+            { title: "Block 2: Pre-Deployment", desc: "Model serialization (ONNX/Pickle) and deterministic pipeline design.", link: "pages/learning/mlops/blocks/b02.html" },
+            { title: "Block 3: Model Serving", desc: "Batch vs. Real-time inference logic and REST API simulations.", link: "pages/learning/mlops/blocks/b03.html" },
+            { title: "Block 4: Flask for ML", desc: "Building lightweight prediction endpoints with Python Flask.", link: "pages/learning/mlops/blocks/b04.html" },
+            { title: "Block 5: FastAPI Mastery", desc: "Asynchronous APIs, Pydantic validation, and auto-generated documentation.", link: "pages/learning/mlops/blocks/b05.html" },
+            { title: "Block 6: API Design", desc: "Versioning, latency optimization, and structured production logging.", link: "pages/learning/mlops/blocks/b06.html" },
+            { title: "Block 7: Docker Basics", desc: "Containerizing ML models for consistent environments across servers.", link: "pages/learning/mlops/blocks/b07.html" },
+            { title: "Block 8: Advanced Docker", desc: "Multi-stage builds and optimizing image size for faster deployments.", link: "pages/learning/mlops/blocks/b08.html" },
+            { title: "Block 9: CI/CD for ML", desc: "Automating tests and Docker builds via integration pipelines.", link: "pages/learning/mlops/blocks/b09.html" },
+            { title: "Block 10: MLflow", desc: "Experiment tracking and managing the Model Registry (Staging/Prod).", link: "pages/learning/mlops/blocks/b10.html" },
+            { title: "Block 11: Drift Detection", desc: "Monitoring performance decay: Data drift vs. Concept drift signals.", link: "pages/learning/mlops/blocks/b11.html" },
+            { title: "Block 12: Monitoring", desc: "Production alerts for latency, throughput, and model degradation.", link: "pages/learning/mlops/blocks/b12.html" },
+            { title: "Block 13: Kubernetes", desc: "Scaling ML APIs with Pods and Services for high-availability.", link: "pages/learning/mlops/blocks/b13.html" }
+        ]
+        },
+        {
+        id: "cloud-infrastructure",
+        title: "Cloud & Infrastructure for AI",
+        desc: "Architecting the environment for AI. Mastering GPUs, distributed training, and managed cloud services like AWS SageMaker and Vertex AI.",
+        status: "In Progress",
+        icon: "cloud",
+        color: "text-cyan-600 dark:text-cyan-400",
+        link: "pages/learning/learning-cloud/learning-cloud.html",
+        levels: [
+            { title: "Block 1: Cloud Basics", desc: "IaaS vs. PaaS vs. SaaS: Why the cloud is the backbone of modern AI.", link: "pages/learning/cloud/blocks/b01.html" },
+            { title: "Block 2: Linux Mastery", desc: "SSH, terminal workflows, and environment management in cloud VMs.", link: "pages/learning/cloud/blocks/b02.html" },
+            { title: "Block 3: Accelerators", desc: "CUDA, GPU memory limits, and choosing between CPUs, GPUs, and TPUs.", link: "pages/learning/cloud/blocks/b03.html" },
+            { title: "Block 4: AWS Foundations", desc: "S3 data lakes, EC2 compute instances, and IAM security protocols.", link: "pages/learning/cloud/blocks/b04.html" },
+            { title: "Block 5: AWS SageMaker", desc: "Managed training jobs, custom containers, and production endpoints.", link: "pages/learning/cloud/blocks/b05.html" },
+            { title: "Block 6: Google Vertex AI", desc: "GCP's managed ML ecosystem: From storage to automated notebooks.", link: "pages/learning/cloud/blocks/b06.html" },
+            { title: "Block 7: Azure ML Studio", desc: "Workspaces, experiments, and compute targets in the Microsoft ecosystem.", link: "pages/learning/cloud/blocks/b07.html" },
+            { title: "Block 8: Distributed Training", desc: "Data vs. Model parallelism and synchronizing weights across clusters.", link: "pages/learning/cloud/blocks/b08.html" },
+            { title: "Block 9: Cloud Pipelines", desc: "Loading large-scale datasets efficiently using object storage (S3/GCS).", link: "pages/learning/cloud/blocks/b09.html" },
+            { title: "Block 10: Auto-Scaling", desc: "Horizontal vs. Vertical scaling and handling massive inference loads.", link: "pages/learning/cloud/blocks/b10.html" },
+            { title: "Block 11: Cost Management", desc: "Spot instances, monitoring GPU utilization, and cloud pricing traps.", link: "pages/learning/cloud/blocks/b11.html" },
+            { title: "Block 12: IaC (Terraform)", desc: "Infrastructure as Code: Building reproducible AI stacks automatically.", link: "pages/learning/cloud/blocks/b12.html" },
+            { title: "Block 13: Cloud Project", desc: "CAPSTONE: A distributed training job on the cloud with full monitoring.", link: "pages/learning/cloud/blocks/b13.html" }
+        ]
+        },
+        {
+        id: "specialized-ai",
+        title: "Specialized AI Domains",
+        desc: "Choosing a superpower. Mastering specific niches like Computer Vision, NLP, Reinforcement Learning, and the frontier of Generative AI.",
+        status: "In Progress",
+        icon: "sparkles",
+        color: "text-amber-600 dark:text-amber-400",
+        link: "pages/learning/learning-specialized/learning-specialized.html",
+        levels: [
+            { title: "Block 1: Domain Overview", desc: "Mapping the AI landscape: CV vs. NLP vs. RL vs. GenAI and industry use cases.", link: "pages/learning/specialized/blocks/b01.html" },
+            { title: "Block 2: Advanced Foundations", desc: "Linear Algebra for convolution, Probability for entropy, and GPU optimization.", link: "pages/learning/specialized/blocks/b02.html" },
+            { title: "Block 3: CV Fundamentals", desc: "Images as tensors, feature extraction, and the OpenCV ecosystem.", link: "pages/learning/specialized/blocks/b03.html" },
+            { title: "Block 4: DL for Vision", desc: "CNN architectures, Transfer Learning, and evaluation metrics like mAP.", link: "pages/learning/specialized/blocks/b04.html" },
+            { title: "Block 5: Object Detection", desc: "Real-time inference with YOLO and training custom object detectors.", link: "pages/learning/specialized/blocks/b05.html" },
+            { title: "Block 6: NLP Fundamentals", desc: "Tokenization, Word Embeddings, and the evolution of text pipelines.", link: "pages/learning/specialized/blocks/b06.html" },
+            { title: "Block 7: Modern NLP & LLMs", desc: "Attention mechanisms, Prompt Engineering, and Fine-tuning strategies.", link: "pages/learning/specialized/blocks/b07.html" },
+            { title: "Block 8: Semantic Search", desc: "Vector embeddings and Retrieval-Augmented Generation (RAG) systems.", link: "pages/learning/specialized/blocks/b08.html" },
+            { title: "Block 9: RL Fundamentals", desc: "Agents, Environments, and the Exploration vs. Exploitation tradeoff.", link: "pages/learning/specialized/blocks/b09.html" },
+            { title: "Block 10: RL Algorithms", desc: "Q-Learning, DQN, and policy gradient methods in simulated environments.", link: "pages/learning/specialized/blocks/b10.html" },
+            { title: "Block 11: Speech & Audio", desc: "Spectrograms and signal processing for TTS and STT pipelines.", link: "pages/learning/specialized/blocks/b11.html" },
+            { title: "Block 12: Generative AI", desc: "Diffusion models and the logic behind controlled text/image generation.", link: "pages/learning/specialized/blocks/b12.html" },
+            { title: "Block 13: Capstone", desc: "DOMAIN PROJECT: A deep-dive portfolio piece in your chosen specialization.", link: "pages/learning/specialized/blocks/b13.html" }
+        ]
+     }   
+        ];
 
     // --- RENDERERS ---
     const renderExperience = (item) => { const detailsHtml = item.details.map(det => `<li class="text-gray-600 dark:text-slate-400 mt-1 flex items-start gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-slate-600 shrink-0"></span> ${det}</li>`).join(''); return `<div class="relative pl-8 group mb-8 last:mb-0"><span class="absolute top-1 -left-[5px] w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-slate-700 border border-white dark:border-slate-900 group-hover:bg-primary transition-colors ring-4 ring-white dark:ring-slate-950"></span><h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">${item.title}</h3><p class="text-sm text-primary font-medium mb-1">${item.subtitle}</p><p class="text-xs text-gray-500 dark:text-slate-500 font-mono mb-3 uppercase tracking-wide">${item.date}</p><p class="text-gray-700 dark:text-slate-300 mb-2 leading-relaxed">${item.description}</p><ul class="text-sm">${detailsHtml}</ul></div>`; };
@@ -267,24 +430,45 @@
         if (data.levels) {
             container.className = "grid grid-cols-1 md:grid-cols-2 gap-6";
             data.levels.forEach((level, index) => {
-                container.innerHTML += `<a href="${root}${level.link}" class="group block p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg h-full"><div class="flex items-center justify-between mb-4"><span class="px-3 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">Level ${index + 1}</span><i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors"></i></div><h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">${level.title}</h3><p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">${level.desc}</p></a>`;
-            });
-        } else if (data.checklist) {
-            container.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4";
-            data.checklist.forEach((item, index) => {
-                const statusClass = item.done ? 'bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-400 border-green-200 dark:border-green-800 hover:bg-green-200 dark:hover:bg-green-900/30' : 'bg-white dark:bg-slate-900 text-gray-500 dark:text-slate-400 border-gray-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:shadow-lg';
-                const dateHtml = (item.done && item.date) ? `<span class="text-[10px] font-medium mt-1 opacity-75">${item.date}</span>` : '';
-                const html = `<div class="${statusClass} border rounded-xl h-24 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden group"><span class="text-[10px] font-bold uppercase tracking-wider opacity-70 mb-1">Day</span><span class="text-2xl font-bold leading-none">${index + 1}</span>${dateHtml}${item.done ? '<i data-lucide="check" class="absolute top-2 right-2 w-4 h-4 opacity-50"></i>' : ''}</div>`;
-                const wrapper = document.createElement('div');
-                wrapper.innerHTML = html;
-                const element = wrapper.firstElementChild;
-                element.addEventListener('click', () => openModal(item));
-                container.appendChild(element);
+                
+                let colorClass = 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400';
+                let labelText = 'Level';
+
+                if (data.id === 'machine-learning') {
+                    colorClass = 'bg-indigo-100 text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-400';
+                    labelText = 'Block';
+                } else if (data.id === 'deep-learning') {
+                    colorClass = 'bg-violet-100 text-violet-700 dark:bg-violet-500/10 dark:text-violet-400';
+                    labelText = 'Block';
+                } else if (data.id === 'data-engineering') {
+                    colorClass = 'bg-teal-100 text-teal-700 dark:bg-teal-500/10 dark:text-teal-400';
+                    labelText = 'Block';
+                } else if (data.id === 'model-deployment') {
+                    colorClass = 'bg-rose-100 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400';
+                    labelText = 'Block';
+                } else if (data.id === 'cloud-infrastructure') {
+                    colorClass = 'bg-cyan-100 text-cyan-700 dark:bg-cyan-500/10 dark:text-cyan-400';
+                    labelText = 'Block';
+                } else if (data.id === 'specialized-ai') {
+                    colorClass = 'bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400';
+                    labelText = 'Block';
+                }
+
+                container.innerHTML += `
+                    <a href="${root}${level.link}" class="group block p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl hover:border-primary dark:hover:border-primary transition-all hover:shadow-lg h-full">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold ${colorClass}">
+                                ${labelText} ${index + 1}
+                            </span>
+                            <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors">${level.title}</h3>
+                        <p class="text-sm text-gray-600 dark:text-slate-400 leading-relaxed">${level.desc}</p>
+                    </a>`;
             });
         }
         lucide.createIcons();
     }
-
     // --- MODAL LOGIC ---
     function openModal(item) {
         const overlay = document.getElementById('modal-overlay');
@@ -350,6 +534,8 @@
         renderCalendar('cpp'); 
         renderCalendar('github');
         renderCalendar('golang');
+        renderCalendar('flask');
+        renderCalendar('rust-core-mastery');
 
         lucide.createIcons();
 

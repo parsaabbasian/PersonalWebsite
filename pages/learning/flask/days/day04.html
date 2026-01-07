@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 4: Routing Deep Dive</title>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             darkMode: 'class',
-            theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { primary: '#38bdf8' } } }
+            theme: { 
+                extend: { 
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }, 
+                    colors: { 
+                        // Set to Flask Green
+                        primary: '#48c774' 
+                    } 
+                } 
+            }
         }
     </script>
 </head>
@@ -30,7 +47,7 @@
     <main class="max-w-3xl mx-auto px-6 pt-32 pb-20">
         
         <div class="mb-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-500/10 text-sky-700 dark:text-sky-400 text-xs font-bold uppercase tracking-wider mb-4">Day 4</div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-primary/10 text-primary dark:text-primary text-xs font-bold uppercase tracking-wider mb-4">Day 4</div>
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Routing Deep Dive</h1>
             <p class="text-lg text-gray-600 dark:text-slate-400">Mastering how Flask maps URLs to logic, ensures security, and builds a scalable API structure.</p>
         </div>
@@ -39,7 +56,7 @@
             
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">1</span> 
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">1</span> 
                     Static vs. Dynamic Routing
                 </h2>
                 <p class="text-sm mb-6 leading-relaxed">
@@ -51,7 +68,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                     <div class="p-5 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl">
                         <h3 class="font-bold text-xs uppercase text-slate-500 mb-3">Static Route</h3>
-                        <div class="bg-slate-950 p-3 rounded font-mono text-[11px] text-sky-400">
+                        <div class="bg-slate-950 p-3 rounded font-mono text-[11px] text-primary">
                             @app.route('/about')
                         </div>
                         <p class="text-xs mt-2 text-slate-500 italic">One URL ➔ One Function</p>
@@ -68,7 +85,7 @@
 
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">2</span> 
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">2</span> 
                     URL Converters (Type Safety)
                 </h2>
                 <p class="text-sm mb-6">Converters are your first line of defense. They prevent the function from running if the data type is wrong.</p>
@@ -105,7 +122,7 @@
 
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
-                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm">3</span> 
+                    <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">3</span> 
                     Dynamic URL Building
                 </h2>
                 <p class="text-sm mb-6 leading-relaxed"><strong>Rule:</strong> Never hardcode your URLs. If you change a route path in Python, <code>url_for()</code> automatically updates every link in your app.</p>
@@ -125,7 +142,7 @@
             <section>
                 <div class="bg-slate-900 border border-slate-800 text-slate-300 rounded-2xl p-8 shadow-xl">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="p-2 rounded-lg bg-sky-500/10 text-sky-500">
+                        <div class="p-2 rounded-lg bg-primary/10 text-primary">
                             <i data-lucide="route"></i>
                         </div>
                         <h2 class="text-2xl font-bold text-white">🧠 The RESTful Mindset</h2>
@@ -177,11 +194,21 @@
         const themeIcon = document.getElementById('theme-icon');
         const html = document.documentElement;
 
+        const updateIcon = (isDark) => {
+            themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+            lucide.createIcons();
+        };
+
+        // Initialize icon based on current class
+        updateIcon(html.classList.contains('dark'));
+
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             const isDark = html.classList.contains('dark');
-            themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
-            lucide.createIcons();
+            
+            // SAVE choice to localStorage
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateIcon(isDark);
         });
     </script>
 </body>
