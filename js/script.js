@@ -263,19 +263,19 @@
             color: "text-violet-600 dark:text-violet-400",
             link: "pages/learning/deep-learning/deep-learning.html",
             levels: [
-                { title: "Block 1: Foundations", desc: "Neurons, Weights, Bias, and the math of dot products.", link: "pages/learning/dl/blocks/b01.html" },
-                { title: "Block 2: Activation Functions", desc: "Non-linearity: Sigmoid, ReLU, Softmax, and vanishing gradients.", link: "pages/learning/dl/blocks/b02.html" },
-                { title: "Block 3: ANNs", desc: "Multi-layer perceptrons, forward propagation, and PyTorch basics.", link: "pages/learning/dl/blocks/b03.html" },
-                { title: "Block 4: Optimization", desc: "Loss functions (Cross-Entropy) and Optimizers like Adam/SGD.", link: "pages/learning/dl/blocks/b04.html" },
-                { title: "Block 5: Backpropagation", desc: "CRITICAL: Chain rule, gradient flow, and manual computation.", link: "pages/learning/dl/blocks/b05.html" },
-                { title: "Block 6: Training Logic", desc: "Regularization, Dropout, and Early Stopping implementation.", link: "pages/learning/dl/blocks/b06.html" },
-                { title: "Block 7: PyTorch Deep Dive", desc: "Autograd, Tensors, and custom training pipelines.", link: "pages/learning/dl/blocks/b07.html" },
-                { title: "Block 8: CNNs", desc: "Convolutional layers, pooling, and image feature maps.", link: "pages/learning/dl/blocks/b08.html" },
-                { title: "Block 9: CNN Architectures", desc: "Batch Norm, Transfer Learning, and ResNet/VGG intuition.", link: "pages/learning/dl/blocks/b09.html" },
-                { title: "Block 10: RNNs", desc: "Sequential data, hidden states, and temporal dependencies.", link: "pages/learning/dl/blocks/b10.html" },
-                { title: "Block 11: LSTM & GRU", desc: "Gated units and long-term memory in sequences.", link: "pages/learning/dl/blocks/b11.html" },
-                { title: "Block 12: Transformers", desc: "Attention mechanism, Self-attention, and the 'Attention is All You Need' logic.", link: "pages/learning/dl/blocks/b12.html" },
-                { title: "Block 13: TF/Keras", desc: "Rebuilding PyTorch logic in the TensorFlow ecosystem.", link: "pages/learning/dl/blocks/b13.html" }
+                { title: "Block 1: Foundations", desc: "Neurons, Weights, Bias, and the math of dot products.", link: "pages/learning/deep-learning/blocks/block01.html" },
+                { title: "Block 2: Activation Functions", desc: "Non-linearity: Sigmoid, ReLU, Softmax, and vanishing gradients.", link: "pages/learning/deep-learning/blocks/block02.html" },
+                { title: "Block 3: ANNs", desc: "Multi-layer perceptrons, forward propagation, and PyTorch basics.", link: "pages/learning/deep-learning/blocks/block03.html" },
+                { title: "Block 4: Optimization", desc: "Loss functions (Cross-Entropy) and Optimizers like Adam/SGD.", link: "pages/learning/deep-learning/blocks/block04.html" },
+                { title: "Block 5: Backpropagation", desc: "CRITICAL: Chain rule, gradient flow, and manual computation.", link: "pages/learning/deep-learning/blocks/block05.html" },
+                { title: "Block 6: Training Logic", desc: "Regularization, Dropout, and Early Stopping implementation.", link: "pages/learning/deep-learning/blocks/block06.html" },
+                { title: "Block 7: PyTorch Deep Dive", desc: "Autograd, Tensors, and custom training pipelines.", link: "pages/learning/deep-learning/blocks/block07.html" },
+                { title: "Block 8: CNNs", desc: "Convolutional layers, pooling, and image feature maps.", link: "pages/learning/deep-learning/blocks/block08.html" },
+                { title: "Block 9: CNN Architectures", desc: "Batch Norm, Transfer Learning, and ResNet/VGG intuition.", link: "pages/learning/deep-learning/blocks/block09.html" },
+                { title: "Block 10: RNNs", desc: "Sequential data, hidden states, and temporal dependencies.", link: "pages/learning/deep-learning/blocks/block10.html" },
+                { title: "Block 11: LSTM & GRU", desc: "Gated units and long-term memory in sequences.", link: "pages/learning/deep-learning/blocks/block11.html" },
+                { title: "Block 12: Transformers", desc: "Attention mechanism, Self-attention, and the 'Attention is All You Need' logic.", link: "pages/learning/deep-learning/blocks/block12.html" },
+                { title: "Block 13: TF/Keras", desc: "Rebuilding PyTorch logic in the TensorFlow ecosystem.", link: "pages/learning/deep-learning/blocks/block13.html" }
             ]
         },
         {
@@ -309,7 +309,7 @@
         status: "In Progress",
         icon: "rocket",
         color: "text-rose-600 dark:text-rose-400",
-        link: "pages/learning/learning-mlops/learning-mlops.html",
+        link: "pages/learning/mlops/learning-mlops.html",
         levels: [
             { title: "Block 1: Intro to MLOps", desc: "DevOps vs. MLOps: Understanding the ML lifecycle and system failure points.", link: "pages/learning/mlops/blocks/b01.html" },
             { title: "Block 2: Pre-Deployment", desc: "Model serialization (ONNX/Pickle) and deterministic pipeline design.", link: "pages/learning/mlops/blocks/b02.html" },
