@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 5: Request & Response Objects</title>
+    <title>Block 5: Backpropagation</title>
 
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -22,20 +22,24 @@
             theme: { 
                 extend: { 
                     fontFamily: { sans: ['Inter', 'sans-serif'] }, 
-                    colors: { 
-                        // Updated to Flask Green
-                        primary: '#48c774' 
-                    } 
+                    colors: { primary: '#7c3aed' } 
                 } 
             }
         }
     </script>
+    <style>
+        .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 10px; }
+        pre { font-family: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace; }
+    </style>
 </head>
 <body class="bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-300 font-sans transition-colors duration-300">
     
     <nav class="fixed w-full z-50 top-0 start-0 border-b border-gray-200 dark:border-white/5 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md transition-colors duration-300">
         <div class="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
-            <a href="../learning-flask.html" class="flex items-center gap-2 text-gray-500 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
+            <a href="../learning-ml.html" class="flex items-center gap-2 text-gray-500 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors">
                 <i data-lucide="arrow-left" class="w-5 h-5"></i> <span class="hidden sm:inline">Back to Curriculum</span>
             </a>
             <button id="theme-toggle" class="p-2 text-gray-500 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors focus:outline-none">
@@ -46,10 +50,10 @@
 
     <main class="max-w-3xl mx-auto px-6 pt-32 pb-20">
         
-        <div class="mb-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-primary/10 text-primary dark:text-primary text-xs font-bold uppercase tracking-wider mb-4">Day 5</div>
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Request & Response</h1>
-            <p class="text-lg text-gray-600 dark:text-slate-400">Translating raw HTTP traffic into clean Python objects and professional server responses.</p>
+        <div class="mb-12">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 text-violet-700 dark:bg-violet-500/10 dark:text-violet-400 text-xs font-bold uppercase tracking-wider mb-4">Block 5 (3 Days)</div>
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Backpropagation</h1>
+            <p class="text-lg text-gray-600 dark:text-slate-400">The most important block in Deep Learning. This is how we assign "blame" for an error to millions of weights across the network.</p>
         </div>
 
         <div class="space-y-16">
@@ -57,54 +61,35 @@
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
                     <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">1</span> 
-                    The <code>request</code> Object
+                    The Blame Game
                 </h2>
-                <p class="text-sm mb-6 leading-relaxed">
-                    Flask wraps every detail the client sends—URLs, headers, and data—into a single global-like object called <code>request</code>. This object is <strong>isolated per user</strong> through the Request Context.
-                </p>
-
+                <p class="mb-6 leading-relaxed">Backpropagation answers one critical question: <strong>How should each weight change to reduce the loss?</strong> It uses the <strong>Chain Rule</strong> to flow the error backward from the output layer to the input.</p>
+                
                 
 
-                <div class="grid grid-cols-1 gap-4 mt-6">
-                    <div class="p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl">
-                        <h3 class="font-bold text-xs uppercase text-slate-500 mb-4">The Data Map (Where to find what)</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950 rounded border border-gray-100 dark:border-slate-800">
-                                <code class="text-xs font-bold text-primary">request.args</code>
-                                <span class="text-[10px] text-slate-500 italic">URL Query Params (?q=flask)</span>
-                            </div>
-                            <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950 rounded border border-gray-100 dark:border-slate-800">
-                                <code class="text-xs font-bold text-emerald-500">request.form</code>
-                                <span class="text-[10px] text-slate-500 italic">HTML Form Data (POST)</span>
-                            </div>
-                            <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950 rounded border border-gray-100 dark:border-slate-800">
-                                <code class="text-xs font-bold text-purple-500">request.json</code>
-                                <span class="text-[10px] text-slate-500 italic">API / JSON Payloads</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="p-6 bg-violet-500/5 border border-violet-500/20 rounded-xl mb-6">
+                    <p class="text-xs italic leading-relaxed">"Forward propagation is for data to make predictions. Backward propagation is for error to find responsibility."</p>
+                </div>
+
+                <div class="bg-slate-100 dark:bg-slate-900 p-8 rounded-xl text-center">
+                    <p class="text-xl font-mono text-primary font-bold">$\frac{dL}{dw} = \frac{dL}{dy} \cdot \frac{dy}{dz} \cdot \frac{dz}{dw}$</p>
+                    <p class="text-[10px] text-gray-500 mt-2 italic">The Chain Rule: The heart of every neural network training step.</p>
                 </div>
             </section>
 
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
                     <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">2</span> 
-                    Metadata: Headers & Cookies
+                    Vanishing & Exploding Gradients
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-800">
-                        <div class="flex items-center gap-2 mb-3 text-amber-500">
-                            <i data-lucide="info" class="w-4 h-4"></i>
-                            <span class="font-bold text-sm uppercase">Headers</span>
-                        </div>
-                        <p class="text-xs text-slate-500 leading-relaxed">The "Instructions." They carry metadata like <code>Content-Type</code> or <code>Authorization</code> tokens.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl">
+                        <h3 class="font-bold text-red-500 text-sm mb-2">Vanishing</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Gradients approach zero. Early layers stop learning. Common with <strong>Sigmoid</strong> and <strong>Tanh</strong> because their derivatives are small at extremes.</p>
                     </div>
-                    <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-800">
-                        <div class="flex items-center gap-2 mb-3 text-blue-500">
-                            <i data-lucide="cookie" class="w-4 h-4"></i>
-                            <span class="font-bold text-sm uppercase">Cookies</span>
-                        </div>
-                        <p class="text-xs text-slate-500 leading-relaxed">The "Memory." Stored in the browser to maintain state (like sessions) across independent requests.</p>
+                    <div class="p-6 bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-xl">
+                        <h3 class="font-bold text-orange-500 text-sm mb-2">Exploding</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Gradients become excessively large, making training unstable. Common in very deep networks or RNNs.</p>
                     </div>
                 </div>
             </section>
@@ -112,39 +97,23 @@
             <section>
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-3 mb-6">
                     <span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary text-sm font-bold">3</span> 
-                    Professional Responses
+                    PyTorch's Autograd
                 </h2>
-                <p class="text-sm mb-6">A response tells the client exactly what happened using a <strong>Status Code</strong> and provides the <strong>Body</strong> (HTML/JSON).</p>
+                <p class="mb-6 text-sm">You rarely write the chain rule by hand. PyTorch builds a <strong>Computation Graph</strong> and applies the chain rule automatically when you call <code>loss.backward()</code>.</p>
+                
+                <div class="bg-slate-950 rounded-xl p-6 font-mono text-xs text-slate-300 border border-slate-800 shadow-lg custom-scrollbar overflow-x-auto">
+                    <div class="text-primary mb-4">// One line triggers the whole backward flow</div>
+<pre class="text-slate-300">
+# Prediction and loss
+output = model(input)
+loss = criterion(output, target)
 
-                
-                
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
-                    <div class="p-4 border-b border-slate-800 bg-slate-950 flex justify-between items-center">
-                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Common Status Codes</span>
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-primary"></i>
-                    </div>
-                    <div class="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="flex gap-3 items-center">
-                            <span class="font-mono text-primary font-bold">200</span>
-                            <span class="text-xs text-slate-400">OK (Success)</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <span class="font-mono text-primary font-bold">201</span>
-                            <span class="text-xs text-slate-400">Created (Success)</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <span class="font-mono text-amber-400 font-bold">400</span>
-                            <span class="text-xs text-slate-400">Bad Request (Client Error)</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <span class="font-mono text-amber-400 font-bold">404</span>
-                            <span class="text-xs text-slate-400">Not Found (Client Error)</span>
-                        </div>
-                        <div class="flex gap-3 items-center">
-                            <span class="font-mono text-red-400 font-bold">500</span>
-                            <span class="text-xs text-slate-400">Server Error (Backend Bug)</span>
-                        </div>
-                    </div>
+# BACKPROP: Computes dL/dw for every weight in the model
+loss.backward()
+
+# Look inside a weight to see its "responsibility"
+print(model.layer1.weight.grad)
+</pre>
                 </div>
             </section>
 
@@ -152,18 +121,15 @@
                 <div class="bg-slate-900 border border-slate-800 text-slate-300 rounded-2xl p-8 shadow-xl">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-500">
-                            <i data-lucide="zap"></i>
+                            <i data-lucide="award"></i>
                         </div>
-                        <h2 class="text-2xl font-bold text-white">🧪 Day 5 Challenge</h2>
+                        <h2 class="text-2xl font-bold text-white">Mastering Block 5</h2>
                     </div>
-                    
-                    <p class="text-sm text-slate-400 mb-6">Backend rule: <strong>Never trust the client.</strong> Use the <code>.get()</code> method to handle missing data gracefully.</p>
-
-                    <div class="bg-slate-950 p-4 rounded-lg font-mono text-[11px] border border-slate-800">
-                        <div class="text-slate-500"># Prevents KeyError if 'id' is missing</div>
-                        <div class="text-primary mt-1">user_id = request.args.<span class="text-yellow-300">get</span>('id')</div>
-                        <div class="text-primary mt-1">page = request.args.<span class="text-yellow-300">get</span>('page', <span class="text-orange-400">1</span>)</div>
-                    </div>
+                    <ul class="space-y-4 text-xs">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-emerald-500"></i> Explain why ReLU prevents vanishing gradients.</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-emerald-500"></i> Describe what <code>.grad</code> represents after a backward pass.</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-emerald-500"></i> Define the difference between Backprop and Optimizer.</li>
+                    </ul>
                 </div>
             </section>
 
@@ -171,11 +137,9 @@
     </main>
 
     <footer class="max-w-3xl mx-auto px-6 pb-10 flex justify-between items-center border-t border-gray-200 dark:border-white/5 pt-10">
-        <a href="day04.html" class="flex items-center gap-2 font-medium text-gray-500 hover:text-primary transition-all">
-            <i data-lucide="arrow-left" class="w-5 h-5"></i> Day 4
-        </a>
-        <a href="day06.html" class="flex items-center gap-2 font-bold text-primary hover:gap-3 transition-all">
-            Day 6: Templates (Jinja2) <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        <p class="text-sm text-gray-500">Block 5: Backprop</p>
+        <a href="block06.html" class="flex items-center gap-2 font-bold text-primary hover:gap-3 transition-all">
+            Next: Training Properly <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
     </footer>
 
@@ -184,20 +148,14 @@
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
         const html = document.documentElement;
-
         const updateIcon = (isDark) => {
             themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
             lucide.createIcons();
         };
-
-        // Initialize icon state
         updateIcon(html.classList.contains('dark'));
-
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             const isDark = html.classList.contains('dark');
-            
-            // SAVE preference to localStorage
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
             updateIcon(isDark);
         });
