@@ -1,33 +1,31 @@
-import { ArrowLeft, FileText } from "lucide-react";
-import Link from "next/link";
+import type { Metadata } from "next";
+import { ArchiveArticle } from "@/components/ArchiveArticle";
+import { archiveSlugs, getArchivePage } from "@/lib/archive";
 
-export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string[] }> }) {
+type Params = { params: Promise<{ slug: string[] }> };
+
+const titleFromSlug = (slug: string[]) =>
+  slug[slug.length - 1].split("-").map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+
+export function generateStaticParams() {
+  return archiveSlugs("blogs");
+}
+
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const title = slug[slug.length - 1].split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const page = getArchivePage(["blogs", ...slug].join("/"));
+  return { title: page?.title ?? titleFromSlug(slug), description: page?.description || undefined };
+}
 
+export default async function BlogDetailPage({ params }: Params) {
+  const { slug } = await params;
+  const route = ["blogs", ...slug].join("/");
   return (
-    <main className="max-w-6xl mx-auto px-6 pt-24 pb-20">
-      <article className="max-w-4xl mx-auto">
-        <header className="mb-10 border-b border-border pb-10">
-          <div className="flex items-center gap-4 mb-6">
-            <Link
-              href="/blogs"
-              className="p-2 rounded-full bg-accent text-muted hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </Link>
-          </div>
-          <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-6">{title}</h1>
-        </header>
-
-        <div className="prose prose-lg dark:prose-invert max-w-none text-muted leading-loose">
-          <div className="p-8 rounded-2xl bg-accent/50 border border-border text-center">
-            <FileText className="w-12 h-12 text-primary mx-auto mb-4 opacity-50" />
-            <h3 className="text-xl font-bold text-foreground mb-2">Content Coming Soon</h3>
-            <p className="max-w-md mx-auto">I'm currently migrating the content for this post to the new Next.js architecture. Check back soon for the full article!</p>
-          </div>
-        </div>
-      </article>
-    </main>
+    <ArchiveArticle
+      route={route}
+      page={getArchivePage(route)}
+      back={{ href: "/blogs", label: "All writing" }}
+      fallbackTitle={titleFromSlug(slug)}
+    />
   );
 }

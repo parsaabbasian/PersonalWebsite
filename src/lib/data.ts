@@ -489,7 +489,7 @@ export const learningData: LearningItem[] = [
     link: "learning/machine-learning",
     levels: [
       { title: "Block 1: Foundations", desc: "ML vs traditional programming, problem framing, and real-world use cases.", link: "learning/machine-learning/blocks/block01-daya" },
-      { title: "Block 2: Supervised Learning", desc: "Labeled data, features vs labels, and loss function intuition.", link: "learning/machine-learning/blocks/block02" },
+      { title: "Block 2: Supervised Learning", desc: "Labeled data, features vs labels, and loss function intuition.", link: "learning/machine-learning/blocks/block02-daya" },
     ]
   },
   {
@@ -513,7 +513,7 @@ export const learningData: LearningItem[] = [
     color: "text-teal-600 dark:text-teal-400",
     link: "learning/data-engineering",
     levels: [
-      { title: "Block 1: Role of Data", desc: "Understanding why Data Engineering is the backbone of ML performance.", link: "learning/data-engineering/blocks/b01" },
+      { title: "Block 1: Role of Data", desc: "Understanding why Data Engineering is the backbone of ML performance.", link: "learning/data-engineering" },
     ]
   },
   {
@@ -525,7 +525,7 @@ export const learningData: LearningItem[] = [
     color: "text-rose-600 dark:text-rose-400",
     link: "learning/mlops",
     levels: [
-      { title: "Block 1: Intro to MLOps", desc: "DevOps vs. MLOps: Understanding the ML lifecycle and system failure points.", link: "learning/mlops/blocks/b01" },
+      { title: "Block 1: Intro to MLOps", desc: "DevOps vs. MLOps: Understanding the ML lifecycle and system failure points.", link: "learning/mlops" },
     ]
   },
   {
@@ -535,9 +535,9 @@ export const learningData: LearningItem[] = [
     status: "In Progress",
     icon: "cloud",
     color: "text-cyan-600 dark:text-cyan-400",
-    link: "learning/learning-cloud",
+    link: "learning/cloud",
     levels: [
-      { title: "Block 1: Cloud Basics", desc: "IaaS vs. PaaS vs. SaaS: Why the cloud is the backbone of modern AI.", link: "learning/cloud/blocks/b01" },
+      { title: "Block 1: Cloud Basics", desc: "IaaS vs. PaaS vs. SaaS: Why the cloud is the backbone of modern AI.", link: "learning/cloud" },
     ]
   },
   {
