@@ -85,14 +85,14 @@ export const educationData: Education[] = [
   {
     title: "Bachelor of Engineering",
     subtitle: "Lassonde School of Engineering - York University",
-    date: "2025 - Present | Expected 2029",
-    description: "Computer Engineering Student. Awarded York International Scholarship of Distinction and the Bethune Prize for Outstanding Contribution to College Life.",
-    grade: "First Class Standing With Distinction",
+    date: "Sep 2025 - May 2029 (Expected)",
+    description: "Computer Engineering Student. Awarded York International Scholarship of Distinction.",
+    grade: "Dean's List (2×) | First Class Standing With Distinction",
     details: [
-      "Dean's List — Academic Excellence",
-      "Bethune Prize for Outstanding Contribution to College Life",
-      "Undergraduate Researcher | Space Geodesy Lab",
-      "Class Rep & Note Share — MATH 1013, EECS 1028, PHYS 1801"
+      "Dean's List (2×) — Academic Excellence",
+      "Bethune Prize for Outstanding Contribution to College Life (Nominee)",
+      "Operations Lead @ GDG on Campus",
+      "Class Rep & Note Share — MATH 1013, MATH 1028, PHYS 1801"
     ],
     bg: "bg-emerald-50 dark:bg-emerald-500/10",
     color: "text-emerald-700 dark:text-emerald-300",
@@ -103,9 +103,19 @@ export const educationData: Education[] = [
 
 export const experienceData: Experience[] = [
   {
+    title: "Communications & Web Director",
+    subtitle: "IEEE YorkU Student Branch",
+    date: "Oct 2026 - Present",
+    description: "Leading communications and the web presence for the IEEE York University Student Branch.",
+    details: [],
+    bg: "bg-sky-50 dark:bg-sky-500/10",
+    color: "text-sky-600 dark:text-sky-400",
+    icon: "cpu"
+  },
+  {
     title: "Undergraduate Researcher",
-    subtitle: "EXINES Lab — York University",
-    date: "Present",
+    subtitle: "EXINES Lab — Lassonde School of Engineering, York University",
+    date: "May 2026 - Present · Hybrid",
     description: "Conducting advanced software engineering and AI research under the supervision of Prof. Maleknaz Nayebi.",
     details: [
       "SWE-bench multimodal evaluation pipelines for AI coding agents",
@@ -120,14 +130,15 @@ export const experienceData: Experience[] = [
   },
   {
     title: "Operations Lead",
-    subtitle: "GDG on Campus York University",
-    date: "Mar 2026 - Present",
+    subtitle: "Google Developer Group (GDG) on Campus @ York University",
+    date: "Apr 2026 - Present",
     description: "Leading operational strategy and execution for Google Developer Groups on Campus at York University, coordinating events and community growth.",
     details: [
       "Logistics, scheduling, and resource planning for workshops",
       "Cross-functional coordination for GDG campus initiatives",
       "Partnerships to grow student engagement with dev tech",
-      "Streamlined operations for consistent event delivery"
+      "Streamlined operations for consistent event delivery",
+      "Team management and leadership"
     ],
     bg: "bg-sky-50 dark:bg-sky-500/10",
     color: "text-sky-600 dark:text-sky-400",
@@ -135,9 +146,9 @@ export const experienceData: Experience[] = [
     logo: "/assets/logos/gdg-logo.png"
   },
   {
-    title: "AI Application Engineer",
-    subtitle: "Diamond AI",
-    date: "June 2026 - Present",
+    title: "AI Product Developer Intern",
+    subtitle: "DiamondAI · Internship",
+    date: "Jun 2026 - Oct 2026",
     description: "Building a high-performance AI video generation studio powered by Google's Gemini Veo and ElevenLabs.",
     details: [
       "Full-stack Next.js app for AI video synthesis and storyboarding",
@@ -148,45 +159,14 @@ export const experienceData: Experience[] = [
     color: "text-emerald-700 dark:text-emerald-300",
     icon: "diamond",
     logo: "/assets/logos/diamondinyou_logo.jpg"
-  },
-  {
-    title: "Undergraduate Researcher",
-    subtitle: "Space Geodesy Lab — York University",
-    date: "Jan 2026 - Present",
-    description: "Conducting scientific research on extreme weather events using satellite data and machine learning under Dr. Spiros Pagiatakis and Yuying (Alice) Wang.",
-    details: [
-      "End-to-end satellite data acquisition, preprocessing, and visualization",
-      "Satellite telemetry and climate model analysis for atmospheric research",
-      "ML algorithms for patterns in extreme weather system impacts",
-      "Data science methods for atmospheric and climate science"
-    ],
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    color: "text-emerald-600 dark:text-emerald-400",
-    icon: "microscope",
-    logo: "/assets/logos/stem-fellowship-logo.png"
-  },
-  {
-    title: "Vice President",
-    subtitle: "MBH&Co.",
-    date: "Jan 2026 - Present",
-    description: "Helping businesses grow through trusted relationships, meaningful connections, and structured collaboration.",
-    details: [
-      "Strategic initiatives for business growth through relationships",
-      "Collaboration frameworks to improve team efficiency",
-      "Meaningful connections within the business community"
-    ],
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    color: "text-emerald-700 dark:text-emerald-300",
-    icon: "briefcase",
-    logo: "/assets/logos/mbh-logo.png"
   }
 ];
 
 export const volunteeringData: Experience[] = [
   {
     title: "Class Rep & Note Share Volunteer",
-    subtitle: "MATH 1013, EECS 1028 & PHYS 1801 — York University",
-    date: "Sep 2025 - April 2026",
+    subtitle: "MATH 1013, MATH 1028 & PHYS 1801 — York University",
+    date: "Sep 2025 - Apr 2026",
     description: "Representing student interests and supporting academic accessibility through structured technical note sharing.",
     details: [
       "Liaised between students and faculty on academic feedback",
