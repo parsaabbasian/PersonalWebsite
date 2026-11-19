@@ -18,7 +18,6 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { DynamicIcon } from "@/components/DynamicIcon";
 import {
   Cpu,
-  Download,
   Briefcase,
   Layers,
   ArrowRight,
@@ -63,9 +62,6 @@ export default function Home() {
             <div className="hero-rise hero-rise-delay-3 flex flex-wrap items-center gap-3">
               <a href="#projects" className="btn-primary">
                 View My Work <ArrowRight className="w-4 h-4" />
-              </a>
-              <a href="/assets/parsa-abbasian-resume.pdf" target="_blank" className="btn-secondary">
-                Resume <Download className="w-4 h-4" />
               </a>
               <div className="flex items-center gap-1 ml-1">
                 {socialLinks.map((l) => {
@@ -266,7 +262,7 @@ export default function Home() {
                   Open to internships, research and collaborations. Have a question, a project idea, or just want to say hi? I&apos;d love to hear from you.
                 </p>
 
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3">
                   {socialLinks.map((l) => {
                     const Icon = socialIcons[l.icon];
                     return (
@@ -286,9 +282,6 @@ export default function Home() {
                   })}
                 </div>
 
-                <a href="/assets/parsa-abbasian-resume.pdf" target="_blank" className="btn-secondary">
-                  Download Resume <Download className="w-4 h-4" />
-                </a>
               </div>
 
               <form action="https://api.web3forms.com/submit" method="POST" className="space-y-3">
