@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, GraduationCap, Linkedin, Mail } from "lucide-react";
 import { siteLinks, socialLinks } from "@/lib/site";
 
-const icons = { Mail, Linkedin, Github };
+const icons = { Mail, Linkedin, Github, GraduationCap };
 
 export function Footer() {
   return (

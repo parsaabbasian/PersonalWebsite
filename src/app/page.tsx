@@ -4,6 +4,8 @@ import {
   educationData,
   volunteeringData,
   highlightsData,
+  publicationsData,
+  scholarUrl,
   skillsData,
   currentProjectData,
 } from "@/lib/data";
@@ -27,9 +29,12 @@ import {
   Award,
   HandHeart,
   MapPin,
+  BookOpenText,
+  ExternalLink,
+  FileText,
 } from "lucide-react";
 
-const socialIcons = { Mail, Linkedin, Github };
+const socialIcons = { Mail, Linkedin, Github, GraduationCap };
 
 export default function Home() {
   const current = experienceData.filter((e) => e.date.includes("Present"));
@@ -151,8 +156,58 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
+          <section id="research">
+            <SectionHeading
+              icon={BookOpenText}
+              title="Research & Publications"
+              index="03"
+              action={
+                <a href={scholarUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-primary transition-colors">
+                  Google Scholar <ArrowRight className="w-4 h-4" />
+                </a>
+              }
+            />
+            <ol className="space-y-4">
+              {publicationsData.map((pub) => (
+                <li key={pub.link} className="card p-5 md:p-6">
+                  <p className="text-[10px] text-muted font-mono uppercase tracking-widest mb-2">
+                    {pub.year} · Preprint
+                  </p>
+                  <h3 className="font-display text-lg font-bold text-foreground leading-snug mb-2">
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                      {pub.title}
+                    </a>
+                  </h3>
+                  <p className="text-sm text-muted mb-1">
+                    {pub.authors.map((a, i) => (
+                      <span key={a}>
+                        {i > 0 && ", "}
+                        {a === "Parsa Abbasian" ? <strong className="text-foreground font-semibold">{a}</strong> : a}
+                      </span>
+                    ))}
+                    {pub.moreAuthors && ", et al."}
+                  </p>
+                  <p className="text-sm italic text-primary mb-3">{pub.venue}</p>
+                  {pub.summary && <p className="text-sm text-muted leading-relaxed mb-4">{pub.summary}</p>}
+                  <div className="flex flex-wrap gap-2">
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg border border-border text-foreground hover:bg-accent transition-colors">
+                      arXiv <ExternalLink className="w-3 h-3" />
+                    </a>
+                    {pub.pdf && (
+                      <a href={pub.pdf} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg border border-border text-foreground hover:bg-accent transition-colors">
+                        PDF <FileText className="w-3 h-3" />
+                      </a>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
           <section id="highlights">
-            <SectionHeading icon={Award} title="Awards & Highlights" index="03" />
+            <SectionHeading icon={Award} title="Awards & Highlights" index="04" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {highlightsData.map((h, i) => (
                 <div key={i} className="card p-5 flex gap-4">
@@ -174,13 +229,13 @@ export default function Home() {
         <ScrollReveal>
           <section id="background" className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16">
             <div id="education">
-              <SectionHeading icon={GraduationCap} title="Education" index="04" />
+              <SectionHeading icon={GraduationCap} title="Education" index="05" />
               {educationData.map((item, i) => (
                 <ExperienceCard key={i} item={item} />
               ))}
             </div>
             <div id="volunteering">
-              <SectionHeading icon={HandHeart} title="Volunteering" index="05" />
+              <SectionHeading icon={HandHeart} title="Volunteering" index="06" />
               {volunteeringData.map((item, i) => (
                 <ExperienceCard key={i} item={item} />
               ))}
@@ -190,7 +245,7 @@ export default function Home() {
 
         <ScrollReveal>
           <section id="skills">
-            <SectionHeading icon={Cpu} title="Skills" index="06" />
+            <SectionHeading icon={Cpu} title="Skills" index="07" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {skillsData.map((category, i) => (
                 <SkillSection key={i} item={category} />
