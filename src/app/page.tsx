@@ -1,6 +1,9 @@
 import Image from "next/image";
 import {
   experienceData,
+  educationData,
+  volunteeringData,
+  highlightsData,
   skillsData,
   currentProjectData,
 } from "@/lib/data";
@@ -19,6 +22,9 @@ import {
   Mail,
   Linkedin,
   Github,
+  GraduationCap,
+  Award,
+  HandHeart,
 } from "lucide-react";
 
 export default function Home() {
@@ -28,14 +34,14 @@ export default function Home() {
       <section className="relative min-h-[100svh] flex items-center">
         <div className="w-full max-w-6xl mx-auto px-6 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="text-left">
-            <p className="hero-rise section-label mb-4">Computer Engineering · York University</p>
+            <p className="hero-rise section-label mb-4">Computer Engineering · Lassonde, York University · Toronto</p>
 
             <h1 className="hero-rise hero-rise-delay-1 font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground leading-[1.05] mb-6">
               Parsa Abbasian
             </h1>
 
             <p className="hero-rise hero-rise-delay-2 text-lg sm:text-xl text-muted max-w-lg leading-relaxed mb-10">
-              Building across full-stack, AI, and research — documenting the work that shapes how I engineer.
+              Second-year Computer Engineering student specializing in full-stack development and AI. Undergraduate Researcher at EXINES Lab, Communications &amp; Web Director at IEEE YorkU, and Operations Lead at GDG on Campus.
             </p>
 
             <div className="hero-rise hero-rise-delay-3 flex flex-wrap gap-3">
@@ -85,12 +91,23 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
+          <section id="highlights">
+            <SectionHeading icon={Award} iconColor="text-primary" title="Awards & Highlights" index="02" />
+            <div className="space-y-0">
+              {highlightsData.map((item, i) => (
+                <ExperienceCard key={i} item={item} />
+              ))}
+            </div>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
           <section id="projects">
             <SectionHeading
               icon={Layers}
               iconColor="text-primary"
               title="Current Projects"
-              index="02"
+              index="03"
               action={
                 <a href="/current-projects" className="inline-flex items-center gap-1.5 text-sm font-medium text-muted hover:text-primary transition-colors">
                   View All <ArrowRight className="w-4 h-4" />
@@ -106,8 +123,30 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal>
+          <section id="education">
+            <SectionHeading icon={GraduationCap} iconColor="text-primary" title="Education" index="04" />
+            <div className="space-y-0">
+              {educationData.map((item, i) => (
+                <ExperienceCard key={i} item={item} />
+              ))}
+            </div>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <section id="volunteering">
+            <SectionHeading icon={HandHeart} iconColor="text-primary" title="Volunteering" index="05" />
+            <div className="space-y-0">
+              {volunteeringData.map((item, i) => (
+                <ExperienceCard key={i} item={item} />
+              ))}
+            </div>
+          </section>
+        </ScrollReveal>
+
+        <ScrollReveal>
           <section id="skills">
-            <SectionHeading icon={Cpu} iconColor="text-primary" title="Technical Skills" index="03" />
+            <SectionHeading icon={Cpu} iconColor="text-primary" title="Technical Skills" index="06" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {skillsData.map((category, i) => (
                 <SkillSection key={i} item={category} />
