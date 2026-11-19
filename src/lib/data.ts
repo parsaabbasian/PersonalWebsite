@@ -91,10 +91,11 @@ export const educationData: Education[] = [
     description: "Computer Engineering Student. Awarded York International Scholarship of Distinction.",
     grade: "Dean's List (2×) | First Class Standing With Distinction",
     details: [
-      "Dean's List (2×) — Academic Excellence",
+      "Dean's Honour Roll (2×), Apr 2026",
       "Bethune Prize for Outstanding Contribution to College Life (Nominee)",
       "Operations Lead @ GDG on Campus",
-      "Class Rep & Note Share — MATH 1013, MATH 1028, PHYS 1801"
+      "Class Rep & Note Share — MATH 1013, MATH 1028, PHYS 1801",
+      "Courses include Applied Calculus I & II (MATH 1013, MATH 1014)"
     ],
     bg: "bg-emerald-50 dark:bg-emerald-500/10",
     color: "text-emerald-700 dark:text-emerald-300",
@@ -166,25 +167,89 @@ export const experienceData: Experience[] = [
 
 export const volunteeringData: Experience[] = [
   {
-    title: "Class Rep & Note Share Volunteer",
-    subtitle: "MATH 1013, MATH 1028 & PHYS 1801 — York University",
+    title: "Class Representative & Note Share Volunteer",
+    subtitle: "York University",
     date: "Sep 2025 - Apr 2026",
     description: "Representing student interests and supporting academic accessibility through structured technical note sharing.",
     details: [
-      "Liaised between students and faculty on academic feedback",
-      "Structured technical notes for accessibility-focused students"
+      "Applied Calculus I (MATH 1013): Class Rep & Note Share, Sep - Dec 2025",
+      "Physics (PHYS 1801) and Discrete Math (MATH 1028): Class Rep, Jan - Apr 2026",
+      "Liaised between students and faculty on academic feedback"
     ],
     bg: "bg-purple-50 dark:bg-purple-500/10",
     color: "text-purple-600 dark:text-purple-400",
     icon: "hand-helping",
     logo: "/assets/logos/lassonde-logo.png"
+  },
+  {
+    title: "Event Coordinator",
+    subtitle: "Iranian Student Association at York University",
+    date: "Sep 2025 - Jan 2026",
+    description: "Helped plan and run community events for Iranian students at York University.",
+    details: [],
+    bg: "bg-rose-50 dark:bg-rose-500/10",
+    color: "text-rose-600 dark:text-rose-400",
+    icon: "heart-handshake"
+  }
+];
+
+export const highlightsData: Experience[] = [
+  {
+    title: "Best Use of Clerk & 1st Runner Up",
+    subtitle: "Build North Hackathon — Georgian",
+    date: "Nov 2026",
+    description: "Built Rehearsal with Soroush Baraouf, Sepehr Khodadadi and Artin Bozorgmehri over 10 days. Placed among ~50 teams and 300+ builders.",
+    details: [],
+    bg: "bg-lime-50 dark:bg-lime-500/10",
+    color: "text-lime-600 dark:text-lime-400",
+    icon: "award"
+  },
+  {
+    title: "Co-author: From White Canes to Edge AI",
+    subtitle: "WalkSentry — arXiv preprint",
+    date: "Nov 2026",
+    description: "A survey of 108 studies (2008–2026) on assistive navigation technologies for blind and low-vision people, from white canes to on-device AI.",
+    details: ["Read the paper: arxiv.org/abs/2611.00671"],
+    bg: "bg-sky-50 dark:bg-sky-500/10",
+    color: "text-sky-600 dark:text-sky-400",
+    icon: "file-text"
+  },
+  {
+    title: "Judge, Programming Challenge",
+    subtitle: "York Engineering Competition — Lassonde Engineering Society",
+    date: "Nov 2026",
+    description: "Judged solutions for optimizing EV charging schedules across time, cost, CO₂ emissions and fairness, selecting the team to represent York at the Ontario Engineering Competition.",
+    details: [],
+    bg: "bg-amber-50 dark:bg-amber-500/10",
+    color: "text-amber-600 dark:text-amber-400",
+    icon: "users"
+  },
+  {
+    title: "Organized GDG York's first event at Google Toronto HQ",
+    subtitle: "Google Developer Group on Campus @ York University",
+    date: "Jul 2026",
+    description: "Helped organize talks from six Google engineers for York students at Google's Toronto office.",
+    details: [],
+    bg: "bg-cyan-50 dark:bg-cyan-500/10",
+    color: "text-cyan-600 dark:text-cyan-400",
+    icon: "rocket"
+  },
+  {
+    title: "Dean's Honour Roll (2×) & Bethune Prize Nominee",
+    subtitle: "York University",
+    date: "Apr 2026",
+    description: "Dean's Honour Roll twice, and nominated for the Bethune Prize for Outstanding Contribution to College Life.",
+    details: [],
+    bg: "bg-emerald-50 dark:bg-emerald-500/10",
+    color: "text-emerald-700 dark:text-emerald-300",
+    icon: "graduation-cap"
   }
 ];
 
 export const skillsData: SkillCategory[] = [
   {
     category: "Languages",
-    items: ["JavaScript (ES6+)", "Python", "Go (Golang)", "C++", "HTML5", "CSS3", "MATLAB"]
+    items: ["JavaScript (ES6+)", "TypeScript", "Python", "Go (Golang)", "C++", "HTML5", "CSS3", "MATLAB"]
   },
   {
     category: "Frontend",
@@ -192,11 +257,15 @@ export const skillsData: SkillCategory[] = [
   },
   {
     category: "Backend & Database",
-    items: ["Node.js", "Express", "WebSocket", "Supabase", "PostgreSQL", "Firebase"]
+    items: ["Node.js", "Express", "WebSocket", "Supabase", "PostgreSQL", "Firebase", "SurrealDB", "Clerk"]
   },
   {
     category: "Tools & AI",
-    items: ["Git & GitHub", "Docker", "Linux", "Vercel", "Render", "OpenCV"]
+    items: ["Git & GitHub", "Docker", "Linux", "Vercel", "Render", "OpenCV", "Gemini AI", "Web Scraping"]
+  },
+  {
+    category: "Spoken Languages",
+    items: ["English (Full professional)", "Persian (Native)"]
   }
 ];
 
