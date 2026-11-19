@@ -43,6 +43,8 @@ export interface Project {
   color?: string;
   customIcon?: string;
   stars?: string;
+  repo?: string;
+  devpost?: string;
 }
 
 export interface Certificate {
@@ -199,6 +201,17 @@ export const skillsData: SkillCategory[] = [
 ];
 
 export const currentProjectData: Project[] = [
+  {
+    title: "Rehearsal",
+    desc: "Best Use of Clerk and 1st Runner Up out of ~50 teams at the Build North hackathon. Lets AI agents rehearse refunds and support updates on a copy of the company first: a person approves the exact plan once, then a model-free engine applies it to production and holds any step the world no longer matches.",
+    tech: ["TypeScript", "React", "Postgres", "Clerk", "SurrealDB"],
+    status: "Hackathon",
+    link: "https://rehearsal-api-40b8.onrender.com/app",
+    repo: "https://github.com/SoroushRF/Rehearsal",
+    devpost: "https://devpost.com/software/rehearsal-gq5m13",
+    icon: "award",
+    color: "text-lime-500"
+  },
   {
     title: "UniSpot",
     desc: "High-performance, real-time event discovery platform for York U. Features a Live Map, GPS Verification, and instant sync via WebSockets.",

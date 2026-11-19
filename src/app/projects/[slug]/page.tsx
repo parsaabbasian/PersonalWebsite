@@ -47,9 +47,14 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
               View Live Project <ExternalLink className="w-4 h-4" />
             </a>
-            <a href="https://github.com/parsaabbasian" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-bold rounded-xl hover:bg-gray-200 dark:hover:bg-white/10 transition-all">
+            <a href={project.repo || "https://github.com/parsaabbasian"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-bold rounded-xl hover:bg-gray-200 dark:hover:bg-white/10 transition-all">
               Source Code <Github className="w-4 h-4" />
             </a>
+            {project.devpost && (
+              <a href={project.devpost} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-bold rounded-xl hover:bg-gray-200 dark:hover:bg-white/10 transition-all">
+                Devpost <ExternalLink className="w-4 h-4" />
+              </a>
+            )}
           </div>
         </header>
 
