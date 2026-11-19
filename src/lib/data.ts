@@ -159,37 +159,6 @@ export const experienceData: Experience[] = [
     color: "text-emerald-700 dark:text-emerald-300",
     icon: "diamond",
     logo: "/assets/logos/diamondinyou_logo.jpg"
-  },
-  {
-    title: "Undergraduate Researcher",
-    subtitle: "Space Geodesy Lab — York University",
-    date: "Jan 2026 - Present",
-    description: "Conducting scientific research on extreme weather events using satellite data and machine learning under Dr. Spiros Pagiatakis and Yuying (Alice) Wang.",
-    details: [
-      "End-to-end satellite data acquisition, preprocessing, and visualization",
-      "Satellite telemetry and climate model analysis for atmospheric research",
-      "ML algorithms for patterns in extreme weather system impacts",
-      "Data science methods for atmospheric and climate science"
-    ],
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    color: "text-emerald-600 dark:text-emerald-400",
-    icon: "microscope",
-    logo: "/assets/logos/stem-fellowship-logo.png"
-  },
-  {
-    title: "Vice President",
-    subtitle: "MBH&Co.",
-    date: "Jan 2026 - Present",
-    description: "Helping businesses grow through trusted relationships, meaningful connections, and structured collaboration.",
-    details: [
-      "Strategic initiatives for business growth through relationships",
-      "Collaboration frameworks to improve team efficiency",
-      "Meaningful connections within the business community"
-    ],
-    bg: "bg-emerald-50 dark:bg-emerald-500/10",
-    color: "text-emerald-700 dark:text-emerald-300",
-    icon: "briefcase",
-    logo: "/assets/logos/mbh-logo.png"
   }
 ];
 
