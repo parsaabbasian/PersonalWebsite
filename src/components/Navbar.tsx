@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ArrowLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
+import { navLinks } from "@/lib/site";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -34,12 +35,7 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Experience", href: "/#experience" },
-    { name: "Projects", href: "/#projects" },
-    { name: "Skills", href: "/#skills" },
-    { name: "Contact", href: "/#contact" },
-  ];
+  const isActive = (href: string) => !href.startsWith("/#") && pathname.startsWith(href);
 
   return (
     <header
@@ -67,7 +63,10 @@ export const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="px-3.5 py-2 text-sm font-medium text-muted hover:text-foreground rounded-lg hover:bg-accent transition-colors"
+              aria-current={isActive(link.href) ? "page" : undefined}
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                isActive(link.href) ? "text-primary bg-accent" : "text-muted hover:text-foreground hover:bg-accent"
+              }`}
             >
               {link.name}
             </Link>

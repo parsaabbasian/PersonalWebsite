@@ -26,6 +26,7 @@ export interface Experience {
   icon: string;
   logo?: string;
   collapsible?: boolean;
+  grade?: string;
 }
 
 export interface SkillCategory {
@@ -205,16 +206,6 @@ export const highlightsData: Experience[] = [
     icon: "award"
   },
   {
-    title: "Co-author: From White Canes to Edge AI",
-    subtitle: "WalkSentry — arXiv preprint",
-    date: "Nov 2026",
-    description: "A survey of 108 studies (2008–2026) on assistive navigation technologies for blind and low-vision people, from white canes to on-device AI.",
-    details: ["Read the paper: arxiv.org/abs/2611.00671"],
-    bg: "bg-sky-50 dark:bg-sky-500/10",
-    color: "text-sky-600 dark:text-sky-400",
-    icon: "file-text"
-  },
-  {
     title: "Judge, Programming Challenge",
     subtitle: "York Engineering Competition — Lassonde Engineering Society",
     date: "Nov 2026",
@@ -243,6 +234,41 @@ export const highlightsData: Experience[] = [
     bg: "bg-emerald-50 dark:bg-emerald-500/10",
     color: "text-emerald-700 dark:text-emerald-300",
     icon: "graduation-cap"
+  }
+];
+
+export interface Publication {
+  title: string;
+  authors: string[];
+  venue: string;
+  year: string;
+  link: string;
+  pdf?: string;
+  summary?: string;
+  moreAuthors?: boolean;
+}
+
+export const scholarUrl = "https://scholar.google.ca/citations?user=N3lPRLIAAAAJ&hl=en";
+
+export const publicationsData: Publication[] = [
+  {
+    title: "From White Canes to Edge AI: A Survey of Assistive Navigation Technologies for Blind and Low-Vision Individuals",
+    authors: ["Abtin Zandi", "Arian Ashrafi", "Sarvin Nami", "Seyed Sina Negahban", "Amirabbas Entezari", "Parsa Abbasian", "Ariyan Azami", "Parisa Taherizadeh", "Bardia Sabagh Kermani", "Roza Ganjipour", "Hamed Farbeh"],
+    venue: "arXiv preprint arXiv:2611.00671",
+    year: "2026",
+    link: "https://arxiv.org/abs/2611.00671",
+    pdf: "https://arxiv.org/pdf/2611.00671",
+    summary: "Reviews 108 studies from 2008 to 2026 on assistive navigation, from white canes and guide dogs to deep learning and on-device AI, and the gap between research prototypes and tools people use every day."
+  },
+  {
+    title: "ROD-Dataset: A Pedestrian-Perspective Benchmark of Urban Obstacle Classes for YOLO-Based Detection",
+    authors: ["A. Zandi", "A. Azami", "B. S. Kermani", "Parsa Abbasian", "R. Ganjipour", "S. Nami"],
+    moreAuthors: true,
+    venue: "arXiv preprint arXiv:2611.00681",
+    year: "2026",
+    link: "https://arxiv.org/abs/2611.00681",
+    pdf: "https://arxiv.org/pdf/2611.00681",
+    summary: "A benchmark dataset of urban obstacle classes captured from a pedestrian's point of view, for training and evaluating YOLO-based detectors."
   }
 ];
 
@@ -488,7 +514,7 @@ export const learningData: LearningItem[] = [
     link: "learning/machine-learning",
     levels: [
       { title: "Block 1: Foundations", desc: "ML vs traditional programming, problem framing, and real-world use cases.", link: "learning/machine-learning/blocks/block01-daya" },
-      { title: "Block 2: Supervised Learning", desc: "Labeled data, features vs labels, and loss function intuition.", link: "learning/machine-learning/blocks/block02" },
+      { title: "Block 2: Supervised Learning", desc: "Labeled data, features vs labels, and loss function intuition.", link: "learning/machine-learning/blocks/block02-daya" },
     ]
   },
   {
@@ -512,7 +538,7 @@ export const learningData: LearningItem[] = [
     color: "text-teal-600 dark:text-teal-400",
     link: "learning/data-engineering",
     levels: [
-      { title: "Block 1: Role of Data", desc: "Understanding why Data Engineering is the backbone of ML performance.", link: "learning/data-engineering/blocks/b01" },
+      { title: "Block 1: Role of Data", desc: "Understanding why Data Engineering is the backbone of ML performance.", link: "learning/data-engineering" },
     ]
   },
   {
@@ -524,7 +550,7 @@ export const learningData: LearningItem[] = [
     color: "text-rose-600 dark:text-rose-400",
     link: "learning/mlops",
     levels: [
-      { title: "Block 1: Intro to MLOps", desc: "DevOps vs. MLOps: Understanding the ML lifecycle and system failure points.", link: "learning/mlops/blocks/b01" },
+      { title: "Block 1: Intro to MLOps", desc: "DevOps vs. MLOps: Understanding the ML lifecycle and system failure points.", link: "learning/mlops" },
     ]
   },
   {
@@ -534,9 +560,9 @@ export const learningData: LearningItem[] = [
     status: "In Progress",
     icon: "cloud",
     color: "text-cyan-600 dark:text-cyan-400",
-    link: "learning/learning-cloud",
+    link: "learning/cloud",
     levels: [
-      { title: "Block 1: Cloud Basics", desc: "IaaS vs. PaaS vs. SaaS: Why the cloud is the backbone of modern AI.", link: "learning/cloud/blocks/b01" },
+      { title: "Block 1: Cloud Basics", desc: "IaaS vs. PaaS vs. SaaS: Why the cloud is the backbone of modern AI.", link: "learning/cloud" },
     ]
   },
   {

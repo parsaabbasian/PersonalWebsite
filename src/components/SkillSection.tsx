@@ -7,7 +7,7 @@ interface SkillSectionProps {
 export const SkillSection = ({ item }: SkillSectionProps) => {
   return (
     <div className="card-flat p-5">
-      <h3 className="text-xs font-bold uppercase tracking-wider text-muted uppercase tracking-wider mb-4">
+      <h3 className="text-xs font-bold uppercase tracking-wider text-muted mb-4">
         {item.category}
       </h3>
       <div className="flex flex-wrap gap-2">

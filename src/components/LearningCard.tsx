@@ -15,7 +15,7 @@ export const LearningCard = ({ item }: LearningCardProps) => {
         </div>
         <div>
           <h4 className="font-display text-base text-foreground group-hover:text-primary transition-colors">{item.title}</h4>
-          <span className={`text-[10px] font-bold uppercase tracking-wider text-[10px] uppercase tracking-wider ${item.status === 'Completed' ? 'text-primary' : 'text-secondary'}`}>
+          <span className={`text-[10px] font-bold uppercase tracking-wider ${item.status === 'Completed' ? 'text-primary' : 'text-secondary'}`}>
             {item.status}
           </span>
         </div>
