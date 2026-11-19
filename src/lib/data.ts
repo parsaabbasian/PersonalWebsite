@@ -318,15 +318,6 @@ export const currentProjectData: Project[] = [
     customIcon: "/assets/icons/unispot-logo.svg"
   },
   {
-    title: "MBH&Co.",
-    desc: "A premium platform for business growth, built with a custom React 19 + Vite frontend and Wix Headless backend.",
-    tech: ["React 19", "TypeScript", "Wix Headless", "Framer Motion"],
-    status: "Beta",
-    link: "https://www.mbhandco.com/",
-    icon: "briefcase",
-    color: "text-emerald-600"
-  },
-  {
     title: "Undercut",
     desc: "A full-stack AI platform for finding underpriced cars. Developed high-performance scrapers in Go to extract real-time data for thousands of GTA car listings.",
     tech: ["Next.js", "FastAPI", "Go", "Gemini AI"],
