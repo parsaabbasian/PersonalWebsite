@@ -16,7 +16,6 @@ export const siteLinks = [
   { name: "Learning", href: "/learning" },
   { name: "Thoughts", href: "/thoughts" },
   { name: "Certificates", href: "/certificates" },
-  { name: "Resume", href: "/assets/parsa-abbasian-resume.pdf" },
 ];
 
 export const socialLinks = [
