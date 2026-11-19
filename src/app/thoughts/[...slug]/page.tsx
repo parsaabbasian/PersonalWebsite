@@ -8,22 +8,22 @@ export default async function ThoughtDetailPage({ params }: { params: Promise<{ 
   return (
     <main className="max-w-6xl mx-auto px-6 pt-24 pb-20">
       <article className="max-w-4xl mx-auto">
-        <header className="mb-10 border-b border-gray-200 dark:border-white/10 pb-10">
+        <header className="mb-10 border-b border-border pb-10">
           <div className="flex items-center gap-4 mb-6">
             <Link
               href="/thoughts"
-              className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-500 hover:text-primary transition-colors"
+              className="p-2 rounded-full bg-accent text-muted hover:text-primary transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
             </Link>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">{title}</h1>
+          <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-tight text-foreground mb-6">{title}</h1>
         </header>
 
         <div className="prose prose-lg dark:prose-invert max-w-none text-muted leading-loose">
           <div className="p-8 rounded-2xl bg-emerald-50/50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-500/20 text-center">
             <Coffee className="w-12 h-12 text-green-500 mx-auto mb-4 opacity-50" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Refining this thought...</h3>
+            <h3 className="text-xl font-bold text-foreground mb-2">Refining this thought...</h3>
             <p className="max-w-md mx-auto">I'm currently porting my personal reflections to this new platform. Stay tuned!</p>
           </div>
         </div>

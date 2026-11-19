@@ -1,6 +1,6 @@
 import { getProjectBySlug } from "@/lib/data";
 import { DynamicIcon } from "@/components/DynamicIcon";
-import { ExternalLink, Github, ArrowLeft, FileText } from "lucide-react";
+import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -15,16 +15,16 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   return (
     <main className="max-w-6xl mx-auto px-6 pt-24 pb-20">
       <article className="max-w-4xl mx-auto">
-        <header className="mb-10 border-b border-gray-200 dark:border-white/10 pb-10">
+        <header className="mb-10 border-b border-border pb-10">
           <div className="flex items-center gap-4 mb-6">
             <Link 
               href="/#current-projects" 
-              className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-500 hover:text-primary transition-colors"
+              className="p-2 rounded-full bg-accent text-muted hover:text-primary transition-colors"
             >
               <ArrowLeft className="w-5 h-5" />
             </Link>
             {project.status && (
-              <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400">
+              <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-accent text-primary border border-border">
                 {project.status}
               </span>
             )}
@@ -36,35 +36,41 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             ) : (
               <DynamicIcon name={project.icon || 'zap'} className={`w-12 h-12 ${project.color || 'text-yellow-500'}`} />
             )}
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">{project.title}</h1>
+            <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-tight text-foreground">{project.title}</h1>
           </div>
           
-          <p className="text-xl text-gray-600 dark:text-slate-400 leading-relaxed mb-8">
-            {project.desc}
-          </p>
 
           <div className="flex flex-wrap gap-4">
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
               View Live Project <ExternalLink className="w-4 h-4" />
             </a>
-            <a href={project.repo || "https://github.com/parsaabbasian"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-bold rounded-xl hover:bg-gray-200 dark:hover:bg-white/10 transition-all">
+            <a href={project.repo || "https://github.com/parsaabbasian"} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-surface border border-border text-foreground font-bold rounded-xl hover:bg-accent transition-all">
               Source Code <Github className="w-4 h-4" />
             </a>
             {project.devpost && (
-              <a href={project.devpost} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white font-bold rounded-xl hover:bg-gray-200 dark:hover:bg-white/10 transition-all">
+              <a href={project.devpost} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-surface border border-border text-foreground font-bold rounded-xl hover:bg-accent transition-all">
                 Devpost <ExternalLink className="w-4 h-4" />
               </a>
             )}
           </div>
         </header>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none text-muted leading-loose">
-          <div className="p-8 rounded-2xl bg-accent/50 border border-border text-center">
-            <FileText className="w-12 h-12 text-primary mx-auto mb-4 opacity-50" />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Detailed Case Study Coming Soon</h3>
-            <p className="max-w-md mx-auto">I'm currently polishing the documentation for this project. Check back soon for the full technical breakdown, architecture overview, and GitHub README integration.</p>
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="card-flat p-6 md:col-span-2">
+            <p className="section-label mb-3">Overview</p>
+            <p className="text-muted leading-relaxed">{project.desc}</p>
           </div>
-        </div>
+          <div className="card-flat p-6">
+            <p className="section-label mb-3">Built with</p>
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((t) => (
+                <span key={t} className="px-2.5 py-1 bg-accent border border-border rounded-md text-sm text-foreground/80">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
       </article>
     </main>
   );

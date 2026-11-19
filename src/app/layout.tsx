@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { Footer } from "@/components/Footer";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -16,7 +17,8 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Parsa Abbasian",
+  metadataBase: new URL("https://parsaabbasian.com"),
+  title: { default: "Parsa Abbasian", template: "%s · Parsa Abbasian" },
   description: "Parsa Abbasian is a Computer Engineering student at York University specializing in Full-Stack Development, AI, and Research. Explore my portfolio, projects, and technical blog.",
   keywords: ["Parsa Abbasian", "Computer Engineering", "York University", "Lassonde School of Engineering", "Portfolio", "Full-Stack Developer", "AI Researcher", "Software Engineer"],
   authors: [{ name: "Parsa Abbasian" }],
@@ -58,6 +60,7 @@ export default function RootLayout({
           <AnimatedBackground />
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

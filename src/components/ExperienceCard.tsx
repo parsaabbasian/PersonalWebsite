@@ -37,10 +37,18 @@ export const ExperienceCard = ({ item }: ExperienceCardProps) => {
           </div>
         </div>
 
-        {(item as any).grade && (
+        {item.description && (
+          <div className="text-sm text-muted leading-relaxed mb-3 space-y-2">
+            {(Array.isArray(item.description) ? item.description : [item.description]).map((d, i) => (
+              <p key={i}>{d}</p>
+            ))}
+          </div>
+        )}
+
+        {item.grade && (
           <div className="inline-flex items-center gap-1.5 mb-3 px-2.5 py-1 rounded-md bg-primary/8 border border-primary/20">
             <Award className="w-3 h-3 text-primary" />
-            <span className="text-xs font-medium text-foreground/80">{(item as any).grade}</span>
+            <span className="text-xs font-medium text-foreground/80">{item.grade}</span>
           </div>
         )}
 
@@ -67,9 +75,9 @@ export const ExperienceCard = ({ item }: ExperienceCardProps) => {
                 >
                   <ul className={isCollapsible ? "pt-2 space-y-1.5" : "space-y-1.5"}>
                     {details.map((det, i) => (
-                      <li key={i} className="text-sm text-muted flex items-center gap-3 min-w-0">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                        <span className="truncate" title={det}>{det}</span>
+                      <li key={i} className="text-sm text-muted flex items-start gap-3 min-w-0">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                        <span>{det}</span>
                       </li>
                     ))}
                   </ul>

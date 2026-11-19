@@ -1,3 +1,4 @@
+import { PageHeader } from "@/components/PageHeader";
 import { learningData, learningInsightsData } from "@/lib/data";
 import { LearningCard } from "@/components/LearningCard";
 import { LearningInsightCard } from "@/components/LearningInsightCard";
@@ -5,14 +6,12 @@ import { BookOpen, Lightbulb } from "lucide-react";
 
 export default function LearningPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 pt-24 pb-20 space-y-20">
-      {/* Header */}
-      <section>
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Learning & Growth</h1>
-        <p className="text-lg text-muted max-w-2xl">
-          A collection of my technical deep dives, conceptual notes, and the structured paths I'm following to master new technologies.
-        </p>
-      </section>
+    <main className="max-w-6xl mx-auto px-6 pt-24 pb-20 space-y-16">
+      <PageHeader
+        label="Learning"
+        title="Learning & Growth"
+        description="Technical deep dives, conceptual notes, and the structured paths I'm following to master new technologies."
+      />
 
       {/* Technical Insights Section */}
       <section>

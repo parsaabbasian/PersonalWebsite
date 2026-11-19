@@ -26,6 +26,7 @@ export interface Experience {
   icon: string;
   logo?: string;
   collapsible?: boolean;
+  grade?: string;
 }
 
 export interface SkillCategory {

@@ -12,7 +12,7 @@ export const LearningInsightCard = ({ item }: LearningInsightCardProps) => {
         <div className="p-1.5 rounded-full bg-primary/10 text-primary border border-primary/20">
           <Lightbulb className="w-3 h-3" />
         </div>
-        <span className="text-[10px] font-bold uppercase tracking-wider text-[10px] uppercase tracking-wider text-muted">{item.category || 'Learning'}</span>
+        <span className="text-[10px] font-bold uppercase tracking-wider text-muted">{item.category || 'Learning'}</span>
       </div>
       <div className="flex justify-between items-start mb-1">
         <h4 className="font-display text-base text-foreground group-hover:text-primary transition-colors">{item.title}</h4>

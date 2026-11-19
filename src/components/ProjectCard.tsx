@@ -23,7 +23,7 @@ export const ProjectCard = ({ item }: ProjectCardProps) => {
           <div>
             <span className="font-display text-lg text-foreground group-hover:text-primary transition-colors block leading-tight">{item.title}</span>
             {item.status && (
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[10px] uppercase tracking-wider text-primary/70">{item.status}</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-primary/70">{item.status}</span>
             )}
           </div>
         </div>
