@@ -328,8 +328,8 @@ export const currentProjectData: Project[] = [
   },
   {
     title: "HawkEye",
-    desc: "Object detection web app built during a 48-hour hackathon sprint.",
-    tech: ["Python", "OpenCV", "HTML/CSS"],
+    desc: "Built in 12 hours at CSHub Local Hack Day. Record a video of a clothing rack and HawkEye identifies each item, spots damage, estimates market value, and writes resale listings, using an FFmpeg frame pipeline and Gemini 2.5 Flash.",
+    tech: ["Gemini 2.5 Flash", "FFmpeg", "Docker", "Render"],
     status: "Hackathon",
     link: "https://hawkeyedemo.onrender.com/",
     icon: "eye",
