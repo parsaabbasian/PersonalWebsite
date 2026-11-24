@@ -65,6 +65,8 @@ export default function Home() {
               Researcher @ <span className="text-foreground font-medium">EXINES Lab</span>
               <span className="mx-2 text-border">·</span>
               Ops Lead @ <span className="text-foreground font-medium">GDG on Campus</span>
+              <span className="mx-2 text-border">·</span>
+              Webmaster @ <span className="text-foreground font-medium">IEEE YorkU</span>
             </p>
 
             <div className="hero-rise hero-rise-delay-3 flex flex-wrap items-center gap-3">
