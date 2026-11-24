@@ -14,16 +14,16 @@
 }
 
 .dark {
-    /* Deep forest base; portrait green as accent */
-    --background: #0f1f1a;
-    --foreground: #eef6f2;
-    --surface: #173028;
-    --border: #2a4a3e;
+    /* Neutral charcoal base; portrait green kept as the accent */
+    --background: #111312;
+    --foreground: #ececec;
+    --surface: #1a1d1c;
+    --border: #2b2f2d;
     --primary: #4eba8f;
     --secondary: #7dcdb0;
-    --muted: #9bb5a9;
-    --accent: #1a3830;
-    --glow: rgba(78, 186, 143, 0.16);
+    --muted: #9a9f9c;
+    --accent: #1d2622;
+    --glow: rgba(78, 186, 143, 0.12);
 }
 
 @theme {
