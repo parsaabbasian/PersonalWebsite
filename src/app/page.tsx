@@ -52,11 +52,19 @@ export default function Home() {
               Parsa Abbasian
             </h1>
 
-            <p className="hero-rise hero-rise-delay-2 text-lg sm:text-xl text-muted max-w-xl leading-relaxed mb-8">
-              Second-year Computer Engineering student building across{" "}
-              <span className="text-foreground font-semibold">full-stack development</span>,{" "}
-              <span className="text-foreground font-semibold">AI</span> and{" "}
-              <span className="text-foreground font-semibold">research</span>.
+            <p className="hero-rise hero-rise-delay-2 text-lg sm:text-xl text-muted max-w-xl leading-relaxed mb-4">
+              Second-year Computer Engineering student at Lassonde, building{" "}
+              <span className="text-foreground font-semibold">full-stack products</span> and{" "}
+              <span className="text-foreground font-semibold">AI systems</span>, and researching how{" "}
+              <span className="text-foreground font-semibold">AI coding agents</span> perform.
+            </p>
+
+            <p className="hero-rise hero-rise-delay-2 text-sm sm:text-base text-muted max-w-xl leading-relaxed mb-8">
+              AI Product Engineer @ <span className="text-foreground font-medium">Diamond AI</span>
+              <span className="mx-2 text-border">·</span>
+              Researcher @ <span className="text-foreground font-medium">EXINES Lab</span>
+              <span className="mx-2 text-border">·</span>
+              Ops Lead @ <span className="text-foreground font-medium">GDG on Campus</span>
             </p>
 
             <div className="hero-rise hero-rise-delay-3 flex flex-wrap items-center gap-3">

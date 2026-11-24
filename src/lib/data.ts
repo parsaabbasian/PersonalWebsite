@@ -114,7 +114,8 @@ export const experienceData: Experience[] = [
     details: [],
     bg: "bg-sky-50 dark:bg-sky-500/10",
     color: "text-sky-600 dark:text-sky-400",
-    icon: "cpu"
+    icon: "cpu",
+    logo: "/assets/logos/ieee-logo.jpg"
   },
   {
     title: "Undergraduate Researcher",
