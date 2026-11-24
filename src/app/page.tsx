@@ -62,11 +62,11 @@ export default function Home() {
             <p className="hero-rise hero-rise-delay-2 text-sm sm:text-base text-muted max-w-xl leading-relaxed mb-8">
               AI Product Engineer @ <span className="text-foreground font-medium">Diamond AI</span>
               <span className="mx-2 text-border">·</span>
-              Researcher @ <span className="text-foreground font-medium">EXINES Lab</span>
+              Webmaster @ <span className="text-foreground font-medium">IEEE YorkU</span>
               <span className="mx-2 text-border">·</span>
               Ops Lead @ <span className="text-foreground font-medium">GDG on Campus</span>
               <span className="mx-2 text-border">·</span>
-              Webmaster @ <span className="text-foreground font-medium">IEEE YorkU</span>
+              Researcher @ <span className="text-foreground font-medium">EXINES Lab</span>
             </p>
 
             <div className="hero-rise hero-rise-delay-3 flex flex-wrap items-center gap-3">
